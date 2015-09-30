@@ -1,0 +1,25 @@
+{
+  "name": "eslint-config-cappuccino",
+  "version": "1.0.0",
+  "description": "Shareable config that provides Cappuccino style rules for eslint",
+  "homepage": "https://github.com/cappuccino/eslint-config-cappuccino",
+  "keywords": [
+    "Cappuccino",
+    "eslint",
+    "eslintconfig",
+    "eslint-config"
+  ],
+  "contributors": [
+    "Aparajita Fishman (http://www.aparajita.com)"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cappuccino/eslint-config-cappuccino.git"
+  },
+  "bugs": "https://github.com/cappuccino/eslint-config-cappuccino/issues",
+  "engines": {
+    "node": ">=4.1.0"
+  },
+  "main": "lib/index.js"
+}
