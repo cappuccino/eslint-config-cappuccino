@@ -1,4 +1,6 @@
-.idea/
-.npmignore
 .editorconfig
+.npmignore
+.travis.yml
+
+.idea/
 test/
