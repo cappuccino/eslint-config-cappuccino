@@ -3,12 +3,12 @@ eslint-config-cappuccino
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
-A plugin that provides Cappuccino style rules for eslint.
+A shareable config that provides Cappuccino style rules for [`eslint`](http://eslint.org).
 
 
 ## Installation
 
-First you need to install [ESLint](http://eslint.org):
+First you need to install `eslint`:
 
 ```
 $ npm i eslint --save-dev
