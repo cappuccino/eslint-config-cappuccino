@@ -1,6 +1,8 @@
 eslint-config-cappuccino
 ========================
 
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+
 A plugin that provides Cappuccino style rules for eslint.
 
 
@@ -30,3 +32,9 @@ Add `cappuccino` to the `extends` section of your `.eslintrc` configuration file
     "extends": "cappuccino"
 }
 ```
+
+[npm-url]: https://npmjs.org/package/gulp
+[npm-image]: http://img.shields.io/npm/v/eslint-config-cappuccino.svg?style=flat
+
+[travis-url]: https://travis-ci.org/cappuccino/eslint-config-cappuccino
+[travis-image]: https://travis-ci.org/cappuccino/eslint-config-cappuccino.svg?branch=master
