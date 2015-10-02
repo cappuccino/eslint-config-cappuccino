@@ -7,14 +7,19 @@ var result = child_process.spawnSync("node_modules/.bin/eslint", "-c lib/eslint.
 
 if (result.status === 1)
 {
-    var fixture = fs.readFileSync("test/fixtures/errors.txt", "utf8");
+    var fixture = fs.readFileSync("test/fixtures/errors.txt", { encoding: "utf8" });
 
     if (fixture === result.stdout)
     {
-        console.log("test passed");
+        console.log("Test passed");
         process.exit(0);
+    }
+    else
+    {
+        console.log("Oops, fixture doesn't match");
+        process.exit(1);
     }
 }
 
-console.log("test failed with status ", result.status);
+console.log("Test failed with status ", result.status);
 process.exit(1);
