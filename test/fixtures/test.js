@@ -765,7 +765,8 @@ doSomething
 let isYes = answer === 1 ? true : false;
 
 // object-curly-spacing
-let object = {one: 1, two: 2};
+let object = {one: 1, two: 2},
+    nestedObject = { one: { two: 2, array: [1, 2] }};
 
 // operator-assignment
 foo = foo + 7;
