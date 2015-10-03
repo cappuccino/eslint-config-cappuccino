@@ -1,47 +1,23 @@
-/* eslint-disable no-unused-vars, no-undef */
+/* eslint-disable no-unused-vars, no-undef, no-redeclare */
 
-// no "use strict", "strict" rule warns here
-let rules = {
-    "env": {
-        "es6": true,
-        "node": true
-    },
-    "rules": {
-        "prefer-template": 2
-    }
-};
+/*
+ * Possible errors
+ */
 
-// no-alert
-alert("This should cause an error.");
-
-// no-array-constructor
-let a1 = Array(0, 1, 2),
-    a2 = new Array(0, 1, 2);
-
-function noCaller()
-{
-    // no-caller
-    let caller = arguments.caller,
-        callee = arguments.callee;
-}
-
-let ex = "";
-
-try
-{
-    throw "foo";
-}
-// no-catch-shadow
-catch (ex)
-{
-    console.log(ex);
-}
-
-let x;
+// strict: use global "use strict"
+// comma-dangle: don't warn
+let array = [1, 2,];
 
 // no-cond-assign
+// no-constant-condition
 if (x = 7)
-    console.log(x);
+    console.log(x); // no-console: don't warn
+
+// no-constant-condition
+if (true)
+    doSomething();
+else if (1)
+    doSomething();
 
 // no-control-regex
 let pattern1 = /\\x1f/,
@@ -50,9 +26,11 @@ let pattern1 = /\\x1f/,
 // no-debugger
 debugger;
 
-// no-delete-var
-let d;
-delete d;
+// no-dupe-args
+function dupe(arg1, arg2, arg3)
+{
+    doSomething();
+}
 
 // no-dupe-keys
 let foo = {
@@ -60,13 +38,17 @@ let foo = {
     bar: "qux"
 };
 
-// no-else-return
-function noElseReturn()
+// no-duplicate-case
+switch (1)
 {
-    if (true)
-        return true;
-    else
-        return false;
+    case 1:
+        break;
+
+    case 1:
+        break;
+
+    default:
+        break;
 }
 
 // no-empty
@@ -76,13 +58,6 @@ if (foo)
 
 // no-empty-character-class
 let charClass = /^abc[]/;
-
-// no-empty-label
-label:
-foo = 7;
-
-// no-eval
-let evil = eval("7");
 
 // no-ex-assign
 try
@@ -121,23 +96,11 @@ for (; !!foo; ) // error Redundant double negation in a for loop condition
     // ...
 }
 
+// no-extra-parens: don't warn
+let parens = (7 * 27) + 31;
+
 // no-extra-semi
 foo = 13; ;
-
-// no-fallthrough
-switch (foo)
-{
-    case 1:
-        console.log(1);
-
-    default:
-        console.log(2);
-}
-
-// no-floating-decimal
-foo = .5;
-foo = 2.;
-foo = -.7;
 
 // no-func-assign
 function bar() {}
@@ -147,9 +110,6 @@ function baz()
 {
     baz = foo;    // error 'baz' is a function
 }
-
-// no-implied-eval
-setTimeout("alert('Hi!');", 100);
 
 // no-inner-declarations [functions]
 function doSomething()
@@ -166,15 +126,249 @@ let regex = new RegExp("["); // error Invalid regular expression: /[/: Untermina
 regex = new RegExp(".", "z"); // error Invalid flags supplied to RegExp constructor 'z'
 regex = new RegExp("\\"); // error Invalid regular expression: /\/: \ at end of pattern
 
-foo.__iterator__ = function () {}; // error Reserved name '__iterator__'
+// no-negated-in-lhs
+if (!"foo" in foo)
+    console.log("nope");
 
-// no-label-var
-foo:
-for (let i in bar)
+// no-obj-calls
+let math = Math(),
+    json = JSON();
+
+// no-regex-spaces
+regex = /foo   bar/;
+
+// no-sparse-arrays
+let colors = ["red",, "blue"];
+
+// no-unexpected-multiline
+let foo = bar
+(1 || 2).baz();
+
+let hello = "world"
+[1, 2, 3].forEach(addNumber);
+
+// no-unreachable
+function unreachable()
 {
-    if (i === 1)
-        break foo;
+    return;
+
+    console.log("never gets here");
 }
+
+// use-isnan
+if (foo === NaN)
+    doSomething();
+
+if (foo !== NaN)
+    doSomething();
+
+// valid-typeof
+if (typeof foo === "sting" ||
+    typeof foo === "obect" ||
+    typeof foo === "undefimed" ||
+    typeof foo === "nunber" ||
+    typeof foo === "bolean" ||
+    typeof foo === "funktion")
+{
+    doSomething();
+}
+
+
+/*
+ * Best practices
+ */
+
+// block-scoped-var
+/* eslint-disable no-var */
+function blockScopedVar()
+{
+    if (true)
+    {
+        var block = 7;
+    }
+
+    block = 13;
+}
+
+/* eslint-enable */
+
+// consistent-return
+function consistent()
+{
+    if (foo)
+        return true;
+
+    return;
+}
+
+// default-case
+switch (foo)
+{
+    case 1:
+        break;
+}
+
+// dot-notation
+let xx = foo["bar"];
+
+// dot-location: don't warn
+gulp.src("lib")
+    .pipe(bar);
+
+// eqeqeq
+let yy = x == foo;
+
+// guard-for-in: don't warn
+let guarded = Object.create(null);
+
+for (let key in guarded)
+    console.log(key);
+
+// no-alert
+alert("This should cause an error.");
+
+// no-caller
+function noCaller()
+{
+    let caller = arguments.caller,
+        callee = arguments.callee;
+}
+
+// no-div-regex: don't warn
+let div = /=foo/;
+
+// no-else-return
+function noElseReturn()
+{
+    if (true)
+        return true;
+    else
+        return false;
+}
+
+// no-empty-label
+label:
+    foo = 7;
+
+// no-eq-null: covered by eqeqeq
+if (n == null)
+    foo();
+
+// no-eval
+let evil = eval("7");
+
+// no-extend-native: don't warn
+Object.prototype.testMe = 7;
+
+// no-extra-bind
+let x = function ()
+{   /*error The function binding is unnecessary.*/
+    foo();
+}.bind(bar);
+
+let bindme = (() =>
+{        /*error The function binding is unnecessary.*/
+    foo();
+}).bind(bar);
+
+bindme = (() =>
+{        /*error The function binding is unnecessary.*/
+    this.foo();
+}).bind(bar);
+
+bindme = function ()
+{   /*error The function binding is unnecessary.*/
+    (function () {
+        this.foo();
+    })();
+}.bind(bar);
+
+bindme = function ()
+{   /*error The function binding is unnecessary.*/
+    function foobar() {
+        this.bar();
+    }
+}.bind(baz);
+
+// no-fallthrough
+switch (foo)
+{
+    case 1:
+        console.log(1);
+
+    default:
+        console.log(2);
+}
+
+// no-floating-decimal
+foo = .5;
+foo = 2.;
+foo = -.7;
+
+// no-implicit-coercion: don't warn
+let implicit = !!foo;
+
+// no-implied-eval
+setTimeout("alert('Hi!');", 100);
+
+// no-invalid-this
+function invalidThis()
+{
+    "use strict";
+
+    this.a = 0;            /*error Unexpected `this`.*/
+    baz(() => this);       /*error Unexpected `this`.*/
+
+    (function() {
+        this.a = 0;        /*error Unexpected `this`.*/
+        baz(() => this);   /*error Unexpected `this`.*/
+    })();
+
+    function foo() {
+        this.a = 0;        /*error Unexpected `this`.*/
+        baz(() => this);   /*error Unexpected `this`.*/
+    }
+
+    let foo = function() {
+        this.a = 0;        /*error Unexpected `this`.*/
+        baz(() => this);   /*error Unexpected `this`.*/
+    };
+
+    foo(function() {
+        this.a = 0;        /*error Unexpected `this`.*/
+        baz(() => this);   /*error Unexpected `this`.*/
+    });
+
+    obj.foo = () => {
+        // `this` of arrow functions is the outer scope's.
+        this.a = 0;        /*error Unexpected `this`.*/
+    };
+
+    let obj = {
+        aaa() {
+            return () => {
+                // There is in a method `aaa`, but `foo` is not a method.
+                this.a = 0;      /*error Unexpected `this`.*/
+                baz(() => this); /*error Unexpected `this`.*/
+            };
+        }
+    };
+
+    class Foo {
+        static foo() {
+            this.a = 0;      /*error Unexpected `this`.*/
+            baz(() => this); /*error Unexpected `this`.*/
+        }
+    }
+
+    foo.forEach(function() {
+        this.a = 0;          /*error Unexpected `this`.*/
+        baz(() => this);     /*error Unexpected `this`.*/
+    });
+}
+
+// no-iterator
+foo.__iterator__ = function () {}; // error Reserved name '__iterator__'
 
 // no-lone-blocks
 {
@@ -195,22 +389,17 @@ function lone2()
     }
 }
 
-// no-lonely-if
-if (foo)
+// no-loop-func
+for (var i = 0; i < 10; i++) // eslint-disable-line
 {
-    // something
-}
-else
-{
-    if (bar())
+    funcs[i] = function()
     {
-        // something else
-    }
+        return i;
+    };
 }
 
-// no-mixed-requires
-let fs = require("fs"),
-    sf = "San Francisco";
+// no-multi-spaces
+let  multi  =  7;
 
 // no-multi-str
 let s = "line 1\
@@ -220,32 +409,17 @@ let s = "line 1\
 String = 7;
 undefined = 13;
 
-// no-negated-in-lhs
-if (!"foo" in foo)
-    console.log("nope");
-
-// no-nested-ternary
-let thing = foo ? bar : baz === "baz" ? "this is" : "truly evil";
-
-// no-new
-new Person();
-
 // no-new-func
 let f1 = new Function("a", "b", "return a + b"),
     f2 = Function("a", "b", "return a + b");
-
-// no-new-object
-let obj1 = new Object(),
-    obj2 = new Object;
 
 // no-new-wrappers
 let stringObject = new String("Hello world"),
     numberObject = new Number(33),
     booleanObject = new Boolean(false);
 
-// no-obj-calls
-let math = Math(),
-    json = JSON();
+// no-new
+new Person();
 
 // no-octal
 let octal = 013;
@@ -253,20 +427,28 @@ let octal = 013;
 // no-octal-escape
 let copyright = "Copyright \251";
 
+// no-param-reassign: don't warn
+function reassign(options)
+{
+    options = options || {};
+}
+
 // no-proto
 let obj = {},
     proto = obj.__proto__;
 
 proto = obj["__proto__"];
 
-// no-regex-spaces
-regex = /foo   bar/;
-
 // no-return-assign
 function returnSomething()
 {
     return foo = bar + 2;
 }
+
+// no-redeclare
+/* eslint-enable no-redeclare */
+let obj = {};
+/* eslint-disable no-redeclare */
 
 // no-script-url
 location.href = "javascript:void(0)";
@@ -292,6 +474,112 @@ switch (val = foo(), val)
 
 while (val = foo(), val < 42);
 
+// no-throw-literal
+function noThrowLiteral()
+{
+    /* eslint-disable no-unreachable */
+    throw "error";         /*error Expected an object to be thrown.*/
+
+    throw 0;               /*error Expected an object to be thrown.*/
+
+    throw undefined;       /*error Do not throw undefined.*/
+
+    throw null;            /*error Expected an object to be thrown.*/
+
+    var err = new Error();
+    throw "an " + err;     /*error Expected an object to be thrown.*/
+    // err is recast to a string literal
+
+    var err = new Error();
+    throw `${err}`;         /*error Expected an object to be thrown.*/
+
+    /* eslint-enable */
+}
+
+// no-unused-expressions
+7;
+
+// no-useless-call
+// These are same as `foo(1, 2, 3);`
+foo.call(undefined, 1, 2, 3);     /*error unnecessary ".call()".*/
+foo.apply(undefined, [1, 2, 3]);  /*error unnecessary ".apply()".*/
+foo.call(null, 1, 2, 3);          /*error unnecessary ".call()".*/
+foo.apply(null, [1, 2, 3]);       /*error unnecessary ".apply()".*/
+
+// These are same as `obj.foo(1, 2, 3);`
+obj.foo.call(obj, 1, 2, 3);       /*error unnecessary ".call()".*/
+obj.foo.apply(obj, [1, 2, 3]);    /*error unnecessary ".apply()".*/
+
+// no-useless-concat
+// these are the same as "10"
+let a = `some` + `string`; /*error Unexpected string concatenation of literals.*/
+let a = '1' + '0';         /*error Unexpected string concatenation of literals.*/
+let a = '1' + `0`;         /*error Unexpected string concatenation of literals.*/
+let a = `1` + '0';         /*error Unexpected string concatenation of literals.*/
+let a = `1` + `0`;         /*error Unexpected string concatenation of literals.*/
+
+// no-warning-comments
+// TODO: Finish this file
+// FIXME: What's the problem?
+
+// no-with
+with (foo) { doSomething(); }
+
+// radix: don't warn
+let x = parseInt("27");
+
+// wrap-iife
+let wrap = (function () { return { y: 1 };}());
+
+// yoda
+if ("red" === color) {          /*error Expected literal to be on the right side of ===.*/
+    // ...
+}
+
+if (true === flag) {             /*error Expected literal to be on the right side of ==.*/
+    // ...
+}
+
+if (5 > count) {                /*error Expected literal to be on the right side of >.*/
+    // ...
+}
+
+if (-1 < str.indexOf(substr)) { /*error Expected literal to be on the right side of <.*/
+    // ...
+}
+
+if (0 <= x && x < 1) {          /*error Expected literal to be on the right side of <=.*/
+    // ...
+}
+
+/*
+ * Variables
+ */
+
+// no-catch-shadow
+let ex = "";
+
+try
+{
+    throw "foo";
+}
+catch (ex)
+{
+    console.log(ex);
+}
+
+// no-delete-var
+let d;
+delete d;
+
+// no-label-var
+foo:
+for (let ii in bar)
+{
+    if (ii === 1)
+        break foo;
+}
+
 // no-shadow
 /* eslint-disable no-var */
 var someVar = "some var";
@@ -308,33 +596,8 @@ let undefined = 7;
 
 function NaN() {}
 
-// no-spaced-func
-doSomething ();
-doSomething
-();
-
-// no-sparse-arrays
-let colors = ["red",, "blue"];
-
-// no-undef
-/* eslint-enable no-undef */
-frazzle = foo;
-
-/* eslint-disable no-undef */
-
 // no-undef-init
 let undef = undefined;
-
-// no-unreachable
-function unreachable()
-{
-    return;
-
-    console.log("never gets here");
-}
-
-// no-unused-expressions
-7;
 
 // no-unused-vars [vars: all, args: after-used]
 /* eslint-enable no-unused-vars */
@@ -344,26 +607,54 @@ function notUsed(arg) {}
 
 /* eslint-disable no-unused-vars */
 
-// no-warning-comments
-// TODO: Finish this file
-// FIXME: What's the problem?
+// no-use-before-define
+f();            /*error f was used before it was defined*/
+function f() {}
 
-// no-with
-with (foo) { doSomething(); }
+function g() {
+    return b;  /*error b was used before it was defined*/
+}
+let b = 1;
 
-// block-scoped-var
-/* eslint-disable no-var */
-function blockScopedVar()
 {
-    if (true)
-    {
-        var block = 7;
-    }
-
-    block = 13;
+    doSomething(c);  /*error c was used before it was defined*/
+    let c = 1;
 }
 
-/* eslint-enable */
+/*
+ * Node.js and CommonJS
+ */
+
+// callback-return
+function foo() {
+    if (err) {
+        callback(err); /*error Expected return with your callback function.*/
+    }
+    callback();
+}
+
+// global-require: don't warn
+require("woo-hoo");
+
+// handle-callback-error
+function loadData (err, data) {
+    doSomething(); // forgot to handle error
+}
+
+// no-new-require
+let appHeader = new require("app-header");
+
+/*
+ * Stylistic issues
+ */
+
+// array-bracket-spacing
+let a = [ 1, 2];
+a = [1, 2 ];
+
+// block-spacing
+function foo() {return true;} /*error Requires a space after "{".*/ /*error Requires a space before "}".*/
+if (foo) { foo = 0;}          /*error Requires a space before "}".*/
 
 // brace-style
 if (foo) {
@@ -382,27 +673,26 @@ else {
     doSomething();
 }
 
-// consistent-return
-function consistent()
+// comma-spacing
+let foo = 1 ,bar = 2;                   /*error There should be no space before ','.*/ /*error A space is required after ','.*/
+let arr = [1 , 2];                      /*error There should be no space before ','.*/
+let obj = { "foo": "bar" ,"baz": "qur" }; /*error There should be no space before ','.*/ /*error A space is required after ','.*/
+foo(a ,b);                              /*error There should be no space before ','.*/ /*error A space is required after ','.*/
+let e = new Error(a ,b);                          /*error There should be no space before ','.*/ /*error A space is required after ','.*/
+function foob(ab ,ba)
 {
-    if (foo)
-        return true;
+}                    /*error There should be no space before ','.*/ /*error A space is required after ','.*/
 
-    return;
-}
+// comma-style
+let first = 7
+  , second = 13;
 
-// default-case
-switch (foo)
-{
-    case 1:
-        break;
-}
+// computed-property-spacing
+foo = object[ foo];
+foo = object[foo ];
 
-// dot-notation
-let xx = foo["bar"];
-
-// eqeqeq
-let yy = x == foo;
+// key-spacing
+let key = { k :7 };
 
 // max-nested-callbacks
 function one()
@@ -427,6 +717,70 @@ let n = new foo();
 
 // new-parens
 let np = new Foo;
+
+// newline-after-var
+let someVar = 7;
+console.log(someVar);
+
+// no-array-constructor
+let a1 = Array(0, 1, 2),
+    a2 = new Array(0, 1, 2);
+
+// no-lonely-if
+if (foo)
+{
+    // something
+}
+else
+{
+    if (bar())
+    {
+        // something else
+    }
+}
+
+
+// no-multiple-empty-lines
+let a = 7;
+
+// no-nested-ternary
+let thing = foo ? bar : baz === "baz" ? "this is" : "truly evil";
+
+// no-negated-condition: don't warn
+if (!foo)
+    console.log("no");
+else
+    console.log("yes");
+
+// no-new-object
+let obj1 = new Object(),
+    obj2 = new Object;
+
+// no-spaced-func
+doSomething ();
+doSomething
+();
+
+// no-unneeded-ternary
+let isYes = answer === 1 ? true : false;
+
+// object-curly-spacing
+let object = {one: 1, two: 2};
+
+// operator-assignment
+foo = foo + 7;
+
+// operator-linebreak
+let fullHeight = borderTop
+               + innerHeight;
+
+// padded-blocks
+if (foo)
+{
+
+    doSomething();
+
+}
 
 // quotes
 let s = 'quotes';
@@ -464,16 +818,20 @@ finally
     // bar
 }
 
-// object-curly-spacing
-let object = {one: 1, two: 2};
+// space-after-keywords
+// space-before-keywords
+do{
+    doSomething();
+}while (foo);
 
-// computed-property-spacing
-foo = object[ foo];
-foo = object[foo ];
+// space-before-function-paren
+function spaceMe ()
+{
+    doSomething();
+}
 
-// array-bracket-spacing
-let a = [ 1, 2];
-a = [1, 2 ];
+// space-in-parens
+spaceMe( 1, 2 );
 
 // space-infix-ops
 foo = 1+2;
@@ -498,26 +856,18 @@ function space()
     return{ foo: "bar" };
 }
 
-// use-isnan
-if (foo === NaN)
-    doSomething();
+// space-unary-ops
+++ foo;
+foo = - foo;
 
-if (foo !== NaN)
-    doSomething();
+// spaced-comment
+/*----*/
+//bad comment
 
-// valid-typeof
-if (typeof foo === "sting" ||
-    typeof foo === "obect" ||
-    typeof foo === "undefimed" ||
-    typeof foo === "nunber" ||
-    typeof foo === "bolean" ||
-    typeof foo === "funktion")
-{
-    doSomething();
-}
 
-// wrap-iife
-let wrap = (function () { return { y: 1 };}());
+/*
+ * ES6
+ */
 
 // arrow-spacing
 foo = param=> param + 1;
@@ -617,3 +967,13 @@ foo(function() { return 7; });
 // prefer-template
 let str = "Hello, " + name + "!";
 str = "Time: " + (12 * 60 * 60 * 1000);
+
+// no-mixed-requires
+let fs = require("fs"),
+    sf = "San Francisco";
+
+// no-undef
+/* eslint-enable no-undef */
+frazzle = foo;
+
+/* eslint-disable no-undef */
