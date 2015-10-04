@@ -233,8 +233,8 @@
   519:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   522:1   warning  Unexpected todo comment                                                                        no-warning-comments
   523:1   warning  Unexpected fixme comment                                                                       no-warning-comments
-  526:1   error    Unexpected use of 'with' statement                                                             no-with
   526:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
+  526:1   error    Unexpected use of 'with' statement                                                             no-with
   526:14  error    Statement inside of curly braces should be on next line                                        brace-style
   532:13  error    Opening curly brace appears on the same line as controlling statement                          brace-style
   532:13  error    Wrap only the function expression in parens                                                    wrap-iife
@@ -286,8 +286,8 @@
   630:5   error    Opening curly brace appears on the same line as controlling statement                          brace-style
   631:9   error    Expected return with your callback function                                                    callback-return
   631:24  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
-  640:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
   640:1   error    Expected error to be handled                                                                   handle-callback-err
+  640:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
   640:18  error    Unexpected space before function parentheses                                                   space-before-function-paren
   645:17  error    Unexpected use of new with require                                                             no-new-require
   645:21  error    A constructor name should not start with a lowercase letter                                    new-cap
@@ -307,8 +307,8 @@
   660:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
   664:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
   668:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  677:13  error    A space is required after ','                                                                  comma-spacing
   677:13  error    There should be no space before ','                                                            comma-spacing
+  677:13  error    A space is required after ','                                                                  comma-spacing
   677:41  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   677:88  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   678:14  error    There should be no space before ','                                                            comma-spacing
@@ -320,13 +320,13 @@
   679:27  error    Unnecessarily quoted property `baz` found                                                      quote-props
   679:43  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   679:90  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
-  680:7   error    There should be no space before ','                                                            comma-spacing
   680:7   error    A space is required after ','                                                                  comma-spacing
+  680:7   error    There should be no space before ','                                                            comma-spacing
   680:41  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   680:88  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   681:1   error    Expected blank line after variable declarations                                                newline-after-var
-  681:21  error    There should be no space before ','                                                            comma-spacing
   681:21  error    A space is required after ','                                                                  comma-spacing
+  681:21  error    There should be no space before ','                                                            comma-spacing
   681:51  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   681:98  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
   682:18  error    There should be no space before ','                                                            comma-spacing
@@ -357,70 +357,67 @@
   765:28  error    Unnecessary use of boolean literals in conditional expression                                  no-unneeded-ternary
   768:15  error    A space is required after '{'                                                                  object-curly-spacing
   768:29  error    A space is required before '}'                                                                 object-curly-spacing
-  771:1   error    Assignment can be replaced with operator assignment                                            operator-assignment
-  775:17  error    '+' should be placed at the end of the line                                                    operator-linebreak
-  779:1   error    Block must not be padded by blank lines                                                        padded-blocks
-  783:2   error    Block must not be padded by blank lines                                                        padded-blocks
-  786:9   error    Strings must use doublequote                                                                   quotes
-  789:10  error    i is already declared in the upper scope                                                       no-shadow
-  789:16  error    Missing whitespace after semicolon                                                             semi-spacing
-  789:16  error    Unexpected whitespace before semicolon                                                         semi-spacing
-  789:24  error    Unexpected whitespace before semicolon                                                         semi-spacing
-  789:24  error    Missing whitespace after semicolon                                                             semi-spacing
-  796:9   error    f is already declared in the upper scope                                                       no-shadow
-  796:9   error    f is already declared in the upper scope                                                       no-shadow
-  823:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  823:3   error    Missing space before opening brace                                                             space-before-blocks
-  825:2   error    Missing space before keyword "while"                                                           space-before-keywords
-  828:17  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  834:8   error    There should be no spaces inside this paren                                                    space-in-parens
-  834:14  error    There should be no spaces inside this paren                                                    space-in-parens
-  837:8   error    Infix operators must be spaced                                                                 space-infix-ops
-  838:8   error    Infix operators must be spaced                                                                 space-infix-ops
-  839:9   error    Infix operators must be spaced                                                                 space-infix-ops
-  845:9   error    Expected an object to be thrown                                                                no-throw-literal
-  845:9   error    Keyword "throw" must be followed by whitespace                                                 space-return-throw-case
-  849:9   error    Keyword "case" must be followed by whitespace                                                  space-return-throw-case
-  856:5   error    Keyword "return" must be followed by whitespace                                                space-return-throw-case
-  860:1   error    Unexpected space after unary operator "++"                                                     space-unary-ops
-  861:7   error    Unexpected space after unary operator "-"                                                      space-unary-ops
-  865:1   error    Expected space or tab after // in comment                                                      spaced-comment
-  873:7   error    Missing space before =>                                                                        arrow-spacing
-  874:15  error    Missing space after =>                                                                         arrow-spacing
-  881:9   error    unexpected `super()`                                                                           constructor-super
-  889:9   error    unexpected `super()`                                                                           constructor-super
-  895:5   error    this constructor requires `super()`                                                            constructor-super
-  895:16  error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  899:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  899:10  error    Missing space after *                                                                          generator-star-spacing
-  899:10  error    Unexpected space before *                                                                      generator-star-spacing
-  903:1   error    `C` is a class                                                                                 no-class-assign
-  906:1   error    Expected blank line after variable declarations                                                newline-after-var
-  907:1   error    `kConstant` is constant                                                                        no-const-assign
-  912:8   error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  913:5   error    Duplicate name "bar"                                                                           no-dupe-class-members
+  772:1   error    Assignment can be replaced with operator assignment                                            operator-assignment
+  776:17  error    '+' should be placed at the end of the line                                                    operator-linebreak
+  780:1   error    Block must not be padded by blank lines                                                        padded-blocks
+  784:2   error    Block must not be padded by blank lines                                                        padded-blocks
+  787:9   error    Strings must use doublequote                                                                   quotes
+  790:10  error    i is already declared in the upper scope                                                       no-shadow
+  790:16  error    Missing whitespace after semicolon                                                             semi-spacing
+  790:16  error    Unexpected whitespace before semicolon                                                         semi-spacing
+  790:24  error    Unexpected whitespace before semicolon                                                         semi-spacing
+  790:24  error    Missing whitespace after semicolon                                                             semi-spacing
+  797:9   error    f is already declared in the upper scope                                                       no-shadow
+  797:9   error    f is already declared in the upper scope                                                       no-shadow
+  824:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
+  824:3   error    Missing space before opening brace                                                             space-before-blocks
+  826:2   error    Missing space before keyword "while"                                                           space-before-keywords
+  829:17  error    Unexpected space before function parentheses                                                   space-before-function-paren
+  835:8   error    There should be no spaces inside this paren                                                    space-in-parens
+  835:14  error    There should be no spaces inside this paren                                                    space-in-parens
+  846:9   error    Expected an object to be thrown                                                                no-throw-literal
+  846:9   error    Keyword "throw" must be followed by whitespace                                                 space-return-throw-case
+  850:9   error    Keyword "case" must be followed by whitespace                                                  space-return-throw-case
+  857:5   error    Keyword "return" must be followed by whitespace                                                space-return-throw-case
+  861:1   error    Unexpected space after unary operator "++"                                                     space-unary-ops
+  862:7   error    Unexpected space after unary operator "-"                                                      space-unary-ops
+  866:1   error    Expected space or tab after // in comment                                                      spaced-comment
+  874:7   error    Missing space before =>                                                                        arrow-spacing
+  875:15  error    Missing space after =>                                                                         arrow-spacing
+  882:9   error    unexpected `super()`                                                                           constructor-super
+  890:9   error    unexpected `super()`                                                                           constructor-super
+  896:5   error    this constructor requires `super()`                                                            constructor-super
+  896:16  error    Opening curly brace appears on the same line as controlling statement                          brace-style
+  900:1   error    Opening curly brace appears on the same line as controlling statement                          brace-style
+  900:10  error    Missing space after *                                                                          generator-star-spacing
+  900:10  error    Unexpected space before *                                                                      generator-star-spacing
+  904:1   error    `C` is a class                                                                                 no-class-assign
+  907:1   error    Expected blank line after variable declarations                                                newline-after-var
+  908:1   error    `kConstant` is constant                                                                        no-const-assign
   913:8   error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  915:15  error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  916:5   error    Duplicate name "baz"                                                                           no-dupe-class-members
+  914:5   error    Duplicate name "bar"                                                                           no-dupe-class-members
+  914:8   error    Opening curly brace appears on the same line as controlling statement                          brace-style
   916:15  error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  924:9   error    "this" is not allowed before super()                                                           no-this-before-super
-  924:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
-  933:9   error    "this" is not allowed before super()                                                           no-this-before-super
-  933:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
-  942:9   error    "super" is not allowed before super()                                                          no-this-before-super
-  942:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
-  951:15  error    "this" is not allowed before super()                                                           no-this-before-super
-  951:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
-  956:1   error    Unexpected var, use let or const instead                                                       no-var
-  960:5   error    Expected property shorthand                                                                    object-shorthand
+  917:5   error    Duplicate name "baz"                                                                           no-dupe-class-members
+  917:15  error    Opening curly brace appears on the same line as controlling statement                          brace-style
+  925:9   error    "this" is not allowed before super()                                                           no-this-before-super
+  925:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
+  934:9   error    "this" is not allowed before super()                                                           no-this-before-super
+  934:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
+  943:9   error    "super" is not allowed before super()                                                          no-this-before-super
+  943:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
+  952:15  error    "this" is not allowed before super()                                                           no-this-before-super
+  952:28  error    Expected exception block, space or tab after /* in comment                                     spaced-comment
+  957:1   error    Unexpected var, use let or const instead                                                       no-var
   961:5   error    Expected property shorthand                                                                    object-shorthand
-  965:5   error    Opening curly brace appears on the same line as controlling statement                          brace-style
-  965:5   error    Unexpected function expression                                                                 prefer-arrow-callback
-  965:18  error    Statement inside of curly braces should be on next line                                        brace-style
-  968:1   error    Expected blank line after variable declarations                                                newline-after-var
-  968:11  error    Unexpected string concatenation                                                                prefer-template
-  969:7   error    Unexpected string concatenation                                                                prefer-template
-  972:1   error    Do not mix 'require' and other declarations                                                    no-mixed-requires
-  977:1   error    "frazzle" is not defined                                                                       no-undef
+  962:5   error    Expected property shorthand                                                                    object-shorthand
+  966:5   error    Opening curly brace appears on the same line as controlling statement                          brace-style
+  966:5   error    Unexpected function expression                                                                 prefer-arrow-callback
+  966:18  error    Statement inside of curly braces should be on next line                                        brace-style
+  969:1   error    Expected blank line after variable declarations                                                newline-after-var
+  969:11  error    Unexpected string concatenation                                                                prefer-template
+  970:7   error    Unexpected string concatenation                                                                prefer-template
+  973:1   error    Do not mix 'require' and other declarations                                                    no-mixed-requires
+  978:1   error    "frazzle" is not defined                                                                       no-undef
 
-✖ 424 problems (422 errors, 2 warnings)
+✖ 421 problems (419 errors, 2 warnings)

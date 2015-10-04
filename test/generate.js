@@ -1,5 +1,7 @@
 "use strict";
 
+/* eslint-disable no-var */
+
 var child_process = require("child_process"),
     fs = require("fs");
 
