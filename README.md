@@ -11,16 +11,16 @@ A shareable config that provides Cappuccino style rules for [`eslint`](http://es
 First you need to install `eslint`:
 
 ```
-$ npm i eslint --save-dev
+$ npm install -g eslint
 ```
 
 Next, install `eslint-config-cappuccino`:
 
 ```
-$ npm install eslint-config-cappuccino --save-dev
+$ npm install -g eslint-config-cappuccino
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-config-cappuccino` globally.
+**Note:** If `eslint` is installed locally and *not* globally, or if you are running a local version via `node_modules/.bin/eslint`, then you must also install `eslint-config-cappuccino` locally.
 
 
 ## Usage

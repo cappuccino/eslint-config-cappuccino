@@ -5,7 +5,7 @@
 var child_process = require("child_process"),
     fs = require("fs");
 
-var result = child_process.spawnSync("./node_modules/.bin/eslint", "--no-eslintrc -c ./lib/eslint.json --rulesdir ./lib/rules -f stylish --no-color ./test/fixtures".split(" "), { encoding: "utf8" });
+var result = child_process.spawnSync("eslint", "--no-eslintrc -c ./lib/eslint.json --rulesdir ./lib/rules -f stylish --no-color ./test/fixtures".split(" "), { encoding: "utf8" });
 
 if (result.status === 1)
 {

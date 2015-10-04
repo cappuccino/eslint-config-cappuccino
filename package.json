@@ -24,9 +24,6 @@
   "main": "lib/index.js",
   "scripts": {
     "generate-fixtures": "node test/generate.js",
-    "test": "node_modules/.bin/eslint -c lib/eslint.json --rulesdir lib/rules test/*.js && node test/test.js"
-  },
-  "dependencies": {
-    "eslint": "^1.6.0"
+    "test": "eslint -c lib/eslint.json --rulesdir lib/rules test/*.js && node test/test.js"
   }
 }

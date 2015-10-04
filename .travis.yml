@@ -5,5 +5,8 @@ node_js:
   - "stable"
   - "0.12"
 
+before_install:
+  - npm install -g eslint
+
 matrix:
   fast_finish: true
