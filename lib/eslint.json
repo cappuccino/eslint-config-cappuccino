@@ -4,7 +4,6 @@
         "node": true
     },
     "rules": {
-        // Possible errors
         "comma-dangle": 0,
         "no-cond-assign": 2,
         "no-console": 0,
@@ -34,7 +33,6 @@
         "valid-jsdoc": 0,
         "valid-typeof": 2,
 
-        // Best practices
         "accessor-pairs": 0,
         "block-scoped-var": 2,
         "complexity": 0,
@@ -101,10 +99,8 @@
         "wrap-iife": [2, "inside"],
         "yoda": 2,
 
-        // Strict mode
         "strict": [2, "global"],
 
-        // Variables
         "init-declarations": 0,
         "no-catch-shadow": 2,
         "no-delete-var": 2,
@@ -123,7 +119,6 @@
         ],
         "no-use-before-define": 2,
 
-        // Node.js and CommonJS
         "callback-return": 2,
         "global-require": 0,
         "handle-callback-err": 2,
@@ -134,7 +129,6 @@
         "no-restricted-modules": 0,
         "no-sync": 0,
 
-        // Stylistic issues
         "array-bracket-spacing": [2, "never"],
         "block-spacing": [2, "always"],
         "brace-style": [2, "allman", { "allowSingleLine": false }],
@@ -182,7 +176,7 @@
         "semi": 2,
         "semi-spacing": [2, { "before": false, "after": true }],
         "sort-vars": 0,
-        "space-after-keywords": 0, // it's broken, disable for now, want [2, "always"],
+        "space-after-keywords": 0,
         "space-before-keywords": [2, "always"],
         "space-before-blocks": 2,
         "space-before-function-paren": [2, "never"],
@@ -193,7 +187,6 @@
         "spaced-comment": [2, "always", { "block": { "exceptions": ["-"] } }],
         "wrap-regex": 0,
 
-        // ECMAScript6
         "array-parens": 0,
         "arrow-spacing": 2,
         "constructor-super": 2,
