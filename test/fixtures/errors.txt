@@ -241,31 +241,31 @@
   865:5   error    Keyword "return" must be followed by whitespace                                                space-return-throw-case
   869:1   error    Unexpected space after unary operator "++"                                                     space-unary-ops
   870:7   error    Unexpected space after unary operator "-"                                                      space-unary-ops
-  874:1   error    Expected space or tab after // in comment                                                      spaced-comment
-  882:7   error    Missing space before =>                                                                        arrow-spacing
-  883:15  error    Missing space after =>                                                                         arrow-spacing
-  890:9   error    unexpected `super()`                                                                           constructor-super
-  898:9   error    unexpected `super()`                                                                           constructor-super
-  904:5   error    this constructor requires `super()`                                                            constructor-super
-  908:10  error    Unexpected space before *                                                                      generator-star-spacing
-  908:10  error    Missing space after *                                                                          generator-star-spacing
-  912:1   error    `C` is a class                                                                                 no-class-assign
-  915:1   error    Expected blank line after variable declarations                                                newline-after-var
-  916:1   error    `kConstant` is constant                                                                        no-const-assign
-  922:5   error    Duplicate name "bar"                                                                           no-dupe-class-members
-  925:5   error    Duplicate name "baz"                                                                           no-dupe-class-members
-  933:9   error    "this" is not allowed before super()                                                           no-this-before-super
-  942:9   error    "this" is not allowed before super()                                                           no-this-before-super
-  951:9   error    "super" is not allowed before super()                                                          no-this-before-super
-  960:15  error    "this" is not allowed before super()                                                           no-this-before-super
-  965:1   error    Unexpected var, use let or const instead                                                       no-var
-  969:5   error    Expected property shorthand                                                                    object-shorthand
+  875:1   error    Expected exception block, space or tab after // in comment                                     spaced-comment
+  883:7   error    Missing space before =>                                                                        arrow-spacing
+  884:15  error    Missing space after =>                                                                         arrow-spacing
+  891:9   error    unexpected `super()`                                                                           constructor-super
+  899:9   error    unexpected `super()`                                                                           constructor-super
+  905:5   error    this constructor requires `super()`                                                            constructor-super
+  909:10  error    Unexpected space before *                                                                      generator-star-spacing
+  909:10  error    Missing space after *                                                                          generator-star-spacing
+  913:1   error    `C` is a class                                                                                 no-class-assign
+  916:1   error    Expected blank line after variable declarations                                                newline-after-var
+  917:1   error    `kConstant` is constant                                                                        no-const-assign
+  923:5   error    Duplicate name "bar"                                                                           no-dupe-class-members
+  926:5   error    Duplicate name "baz"                                                                           no-dupe-class-members
+  934:9   error    "this" is not allowed before super()                                                           no-this-before-super
+  943:9   error    "this" is not allowed before super()                                                           no-this-before-super
+  952:9   error    "super" is not allowed before super()                                                          no-this-before-super
+  961:15  error    "this" is not allowed before super()                                                           no-this-before-super
+  966:1   error    Unexpected var, use let or const instead                                                       no-var
   970:5   error    Expected property shorthand                                                                    object-shorthand
-  974:5   error    Unexpected function expression                                                                 prefer-arrow-callback
-  977:1   error    Expected blank line after variable declarations                                                newline-after-var
-  977:11  error    Unexpected string concatenation                                                                prefer-template
-  978:7   error    Unexpected string concatenation                                                                prefer-template
-  981:1   error    Do not mix 'require' and other declarations                                                    no-mixed-requires
-  986:1   error    "frazzle" is not defined                                                                       no-undef
+  971:5   error    Expected property shorthand                                                                    object-shorthand
+  975:5   error    Unexpected function expression                                                                 prefer-arrow-callback
+  978:1   error    Expected blank line after variable declarations                                                newline-after-var
+  978:11  error    Unexpected string concatenation                                                                prefer-template
+  979:7   error    Unexpected string concatenation                                                                prefer-template
+  982:1   error    Do not mix 'require' and other declarations                                                    no-mixed-requires
+  987:1   error    "frazzle" is not defined                                                                       no-undef
 
 ✖ 269 problems (267 errors, 2 warnings)

@@ -871,6 +871,7 @@ foo = - foo;
 
 // spaced-comment
 /*----*/
+//-----
 //bad comment
 
 
