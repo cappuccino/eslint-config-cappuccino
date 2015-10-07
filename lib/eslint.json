@@ -41,7 +41,7 @@
         "default-case": 2,
         "dot-notation": 2,
         "dot-location": 0,
-        "eqeqeq": 2,
+        "eqeqeq": [2, "allow-null"],
         "guard-for-in": 0,
         "no-alert": 2,
         "no-caller": 2,
@@ -131,7 +131,7 @@
 
         "array-bracket-spacing": [2, "never"],
         "block-spacing": [2, "always"],
-        "brace-style": [2, "allman", { "allowSingleLine": false }],
+        "brace-style": [2, "allman", { "allowSingleLine": true }],
         "camelcase": 0,
         "comma-spacing": [2, { "before": false, "after": true }],
         "comma-style": [2, "last"],
