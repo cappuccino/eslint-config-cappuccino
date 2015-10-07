@@ -117,7 +117,7 @@
                 "args": "after-used"
             }
         ],
-        "no-use-before-define": 2,
+        "no-use-before-define": [2, "nofunc"],
 
         "callback-return": 2,
         "global-require": 0,
