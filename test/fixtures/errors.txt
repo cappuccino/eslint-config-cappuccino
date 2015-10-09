@@ -1,9 +1,6 @@
     9:1   error    Use the global form of "use strict"                                                            strict
     9:18  error    A space is required after ','                                                                  comma-spacing
-   15:1   error    Unexpected constant condition                                                                  no-constant-condition
    15:1   error    Expected a conditional expression and instead saw an assignment                                no-cond-assign
-   19:1   error    Unexpected constant condition                                                                  no-constant-condition
-   21:6   error    Unexpected constant condition                                                                  no-constant-condition
    26:27  error    Unexpected control character in regular expression                                             no-control-regex
    29:1   error    Unexpected 'debugger' statement                                                                no-debugger
    40:5   error    Duplicate key 'bar'                                                                            no-dupe-keys
@@ -30,8 +27,8 @@
   128:9   error    Invalid flags supplied to RegExp constructor 'z'                                               no-invalid-regexp
   129:9   error    Invalid regular expression: /\/: \ at end of pattern                                           no-invalid-regexp
   132:5   error    The `in` expression's left operand is negated                                                  no-negated-in-lhs
-  136:12  error    'Math' is not a function                                                                       no-obj-calls
   136:12  error    A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
+  136:12  error    'Math' is not a function                                                                       no-obj-calls
   137:12  error    'JSON' is not a function                                                                       no-obj-calls
   137:12  error    A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
   140:9   error    Spaces are hard to count. Use {3}                                                              no-regex-spaces
@@ -49,7 +46,6 @@
   171:20  error    Invalid typeof comparison value                                                                valid-typeof
   172:20  error    Invalid typeof comparison value                                                                valid-typeof
   173:20  error    Invalid typeof comparison value                                                                valid-typeof
-  187:5   error    Unexpected constant condition                                                                  no-constant-condition
   189:9   error    Expected blank line after variable declarations                                                newline-after-var
   192:5   error    "block" used outside of binding context                                                        block-scoped-var
   203:5   error    Expected a return value                                                                        consistent-return
@@ -60,7 +56,6 @@
   235:5   error    Expected blank line after variable declarations                                                newline-after-var
   235:18  error    Avoid arguments.caller                                                                         no-caller
   236:18  error    Avoid arguments.callee                                                                         no-caller
-  245:5   error    Unexpected constant condition                                                                  no-constant-condition
   248:9   error    Unexpected 'else' after 'return'                                                               no-else-return
   252:1   error    Unexpected label "label"                                                                       no-empty-label
   260:12  error    eval can be harmful                                                                            no-eval
@@ -118,8 +113,8 @@
   492:5   error    Do not throw undefined                                                                         no-throw-literal
   492:11  error    undefined was used before it was defined                                                       no-use-before-define
   494:5   error    Expected an object to be thrown                                                                no-throw-literal
-  496:5   error    Expected blank line after variable declarations                                                newline-after-var
   496:5   error    Unexpected var, use let or const instead                                                       no-var
+  496:5   error    Expected blank line after variable declarations                                                newline-after-var
   497:5   error    Expected an object to be thrown                                                                no-throw-literal
   497:11  error    Unexpected string concatenation                                                                prefer-template
   500:5   error    Unexpected var, use let or const instead                                                       no-var
@@ -187,14 +182,14 @@
   685:14  error    There should be no space before ','                                                            comma-spacing
   686:1   error    Expected blank line after variable declarations                                                newline-after-var
   686:13  error    Unnecessarily quoted property `foo` found                                                      quote-props
-  686:26  error    There should be no space before ','                                                            comma-spacing
   686:26  error    A space is required after ','                                                                  comma-spacing
+  686:26  error    There should be no space before ','                                                            comma-spacing
   686:27  error    Unnecessarily quoted property `baz` found                                                      quote-props
-  687:7   error    A space is required after ','                                                                  comma-spacing
   687:7   error    There should be no space before ','                                                            comma-spacing
+  687:7   error    A space is required after ','                                                                  comma-spacing
   688:1   error    Expected blank line after variable declarations                                                newline-after-var
-  688:21  error    There should be no space before ','                                                            comma-spacing
   688:21  error    A space is required after ','                                                                  comma-spacing
+  688:21  error    There should be no space before ','                                                            comma-spacing
   689:18  error    There should be no space before ','                                                            comma-spacing
   689:18  error    A space is required after ','                                                                  comma-spacing
   695:4   error    ',' should be placed last                                                                      comma-style
@@ -224,10 +219,10 @@
   792:2   error    Block must not be padded by blank lines                                                        padded-blocks
   795:9   error    Strings must use doublequote                                                                   quotes
   798:10  error    i is already declared in the upper scope                                                       no-shadow
-  798:16  error    Unexpected whitespace before semicolon                                                         semi-spacing
   798:16  error    Missing whitespace after semicolon                                                             semi-spacing
-  798:24  error    Unexpected whitespace before semicolon                                                         semi-spacing
+  798:16  error    Unexpected whitespace before semicolon                                                         semi-spacing
   798:24  error    Missing whitespace after semicolon                                                             semi-spacing
+  798:24  error    Unexpected whitespace before semicolon                                                         semi-spacing
   805:9   error    f is already declared in the upper scope                                                       no-shadow
   805:9   error    f is already declared in the upper scope                                                       no-shadow
   832:3   error    Missing space before opening brace                                                             space-before-blocks
@@ -235,8 +230,8 @@
   837:17  error    Unexpected space before function parentheses                                                   space-before-function-paren
   843:8   error    There should be no spaces inside this paren                                                    space-in-parens
   843:14  error    There should be no spaces inside this paren                                                    space-in-parens
-  854:9   error    Expected an object to be thrown                                                                no-throw-literal
   854:9   error    Keyword "throw" must be followed by whitespace                                                 space-return-throw-case
+  854:9   error    Expected an object to be thrown                                                                no-throw-literal
   858:9   error    Keyword "case" must be followed by whitespace                                                  space-return-throw-case
   865:5   error    Keyword "return" must be followed by whitespace                                                space-return-throw-case
   869:1   error    Unexpected space after unary operator "++"                                                     space-unary-ops
@@ -247,8 +242,8 @@
   891:9   error    unexpected `super()`                                                                           constructor-super
   899:9   error    unexpected `super()`                                                                           constructor-super
   905:5   error    this constructor requires `super()`                                                            constructor-super
-  909:10  error    Unexpected space before *                                                                      generator-star-spacing
   909:10  error    Missing space after *                                                                          generator-star-spacing
+  909:10  error    Unexpected space before *                                                                      generator-star-spacing
   913:1   error    `C` is a class                                                                                 no-class-assign
   916:1   error    Expected blank line after variable declarations                                                newline-after-var
   917:1   error    `kConstant` is constant                                                                        no-const-assign
@@ -268,4 +263,4 @@
   982:1   error    Do not mix 'require' and other declarations                                                    no-mixed-requires
   987:1   error    "frazzle" is not defined                                                                       no-undef
 
-✖ 269 problems (267 errors, 2 warnings)
+✖ 264 problems (262 errors, 2 warnings)
