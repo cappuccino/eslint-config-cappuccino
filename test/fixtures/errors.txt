@@ -1,266 +1,262 @@
-    9:1   error    Use the global form of "use strict"                                                            strict
-    9:18  error    A space is required after ','                                                                  comma-spacing
-   15:1   error    Expected a conditional expression and instead saw an assignment                                no-cond-assign
-   26:27  error    Unexpected control character in regular expression                                             no-control-regex
-   29:1   error    Unexpected 'debugger' statement                                                                no-debugger
-   40:5   error    Duplicate key 'bar'                                                                            no-dupe-keys
-   49:5   error    Duplicate case label                                                                           no-duplicate-case
-   58:1   error    Empty block statement                                                                          no-empty
-   62:17  error    Empty class                                                                                    no-empty-character-class
-   69:1   error    Value of 'e' may be overwritten in IE 8 and earlier                                            no-catch-shadow
-   71:5   error    Do not assign to the exception parameter                                                       no-ex-assign
-   75:9   error    Redundant multiple negation                                                                    no-extra-boolean-cast
-   76:8   error    Redundant double negation in a ternary condition                                               no-extra-boolean-cast
-   77:16  error    Redundant double negation in call to Boolean()                                                 no-extra-boolean-cast
-   78:7   error    Do not use Boolean as a constructor                                                            no-new-wrappers
-   78:20  error    Redundant double negation in Boolean constructor call                                          no-extra-boolean-cast
-   80:6   error    Redundant double negation in an if statement condition                                         no-extra-boolean-cast
-   85:9   error    Redundant double negation in a while loop condition                                            no-extra-boolean-cast
-   94:9   error    Redundant double negation in a do while loop condition                                         no-extra-boolean-cast
-   96:9   error    Redundant double negation in a for loop condition                                              no-extra-boolean-cast
-   96:14  error    There should be no spaces inside this paren                                                    space-in-parens
-  105:11  error    Unnecessary semicolon                                                                          no-extra-semi
-  109:1   error    'bar' is a function                                                                            no-func-assign
-  113:5   error    'baz' is a function                                                                            no-func-assign
-  121:9   error    Move function declaration to function body root                                                no-inner-declarations
-  126:13  error    Invalid regular expression: /[/: Unterminated character class                                  no-invalid-regexp
-  128:9   error    Invalid flags supplied to RegExp constructor 'z'                                               no-invalid-regexp
-  129:9   error    Invalid regular expression: /\/: \ at end of pattern                                           no-invalid-regexp
-  132:5   error    The `in` expression's left operand is negated                                                  no-negated-in-lhs
-  136:12  error    A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
-  136:12  error    'Math' is not a function                                                                       no-obj-calls
-  137:12  error    'JSON' is not a function                                                                       no-obj-calls
-  137:12  error    A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
-  140:9   error    Spaces are hard to count. Use {3}                                                              no-regex-spaces
-  143:14  error    Unexpected comma in middle of array                                                            no-sparse-arrays
-  146:11  error    Unexpected space between function name and paren                                               no-spaced-func
-  147:1   error    Unexpected newline between function and ( of function call                                     no-unexpected-multiline
-  150:1   error    Unexpected newline between object and [ of property access                                     no-unexpected-multiline
-  150:2   error    Unexpected use of comma operator                                                               no-sequences
-  157:5   error    Found unexpected statement after a return                                                      no-unreachable
-  161:5   error    Use the isNaN function to compare with NaN                                                     use-isnan
-  164:5   error    Use the isNaN function to compare with NaN                                                     use-isnan
-  168:20  error    Invalid typeof comparison value                                                                valid-typeof
-  169:20  error    Invalid typeof comparison value                                                                valid-typeof
-  170:20  error    Invalid typeof comparison value                                                                valid-typeof
-  171:20  error    Invalid typeof comparison value                                                                valid-typeof
-  172:20  error    Invalid typeof comparison value                                                                valid-typeof
-  173:20  error    Invalid typeof comparison value                                                                valid-typeof
-  189:9   error    Expected blank line after variable declarations                                                newline-after-var
-  192:5   error    "block" used outside of binding context                                                        block-scoped-var
-  203:5   error    Expected a return value                                                                        consistent-return
-  207:1   error    Expected a default case                                                                        default-case
-  214:10  error    ["bar"] is better written in dot notation                                                      dot-notation
-  221:12  error    Expected '===' and instead saw '=='                                                            eqeqeq
-  230:1   error    Unexpected alert                                                                               no-alert
-  235:5   error    Expected blank line after variable declarations                                                newline-after-var
-  235:18  error    Avoid arguments.caller                                                                         no-caller
-  236:18  error    Avoid arguments.callee                                                                         no-caller
-  248:9   error    Unexpected 'else' after 'return'                                                               no-else-return
-  252:1   error    Unexpected label "label"                                                                       no-empty-label
-  260:12  error    eval can be harmful                                                                            no-eval
-  266:5   error    The function binding is unnecessary                                                            no-extra-bind
-  266:13  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  271:14  error    The function binding is unnecessary                                                            no-extra-bind
-  276:10  error    The function binding is unnecessary                                                            no-extra-bind
-  281:10  error    The function binding is unnecessary                                                            no-extra-bind
-  281:18  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  283:14  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  288:10  error    The function binding is unnecessary                                                            no-extra-bind
-  288:18  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  298:5   error    Expected a "break" statement before "default"                                                  no-fallthrough
-  306:7   error    A leading decimal point can be confused with a dot                                             no-floating-decimal
-  307:7   error    A trailing decimal point can be confused with a dot                                            no-floating-decimal
-  308:8   error    A leading decimal point can be confused with a dot                                             no-floating-decimal
-  314:1   error    Implied eval. Consider passing a function instead of a string                                  no-implied-eval
-  328:14  error    foo is already declared in the upper scope                                                     no-shadow
-  366:13  error    Unexpected `this`                                                                              no-invalid-this
-  367:23  error    Unexpected `this`                                                                              no-invalid-this
-  379:1   error    Reserved name '__iterator__'                                                                   no-iterator
-  382:1   error    Block is redundant                                                                             no-lone-blocks
-  388:5   error    Nested block is redundant                                                                      no-lone-blocks
-  395:5   error    Nested block is redundant                                                                      no-lone-blocks
-  403:16  error    Don't make functions within a loop                                                             no-loop-func
-  410:6   error    Multiple spaces found before 'multi'                                                           no-multi-spaces
-  410:13  error    Multiple spaces found before '='                                                               no-multi-spaces
-  410:16  error    Multiple spaces found before '7'                                                               no-multi-spaces
-  413:9   error    Multiline support is limited to browsers supporting ES5 only                                   no-multi-str
-  417:1   error    String is a read-only native object                                                            no-native-reassign
-  420:10  error    The Function constructor is eval                                                               no-new-func
-  421:10  error    The Function constructor is eval                                                               no-new-func
-  424:20  error    Do not use String as a constructor                                                             no-new-wrappers
-  425:20  error    Do not use Number as a constructor                                                             no-new-wrappers
-  426:21  error    Do not use Boolean as a constructor                                                            no-new-wrappers
-  429:1   error    Do not use 'new' for side effects                                                              no-new
-  432:13  error    Octal literals should not be used                                                              no-octal
-  435:17  error    Don't use octal: '\251'. Use '\u....' instead                                                  no-octal-escape
-  445:13  error    The '__proto__' property is deprecated                                                         no-proto
-  447:9   error    ["__proto__"] is better written in dot notation                                                dot-notation
-  447:9   error    The '__proto__' property is deprecated                                                         no-proto
-  452:5   error    Return statement should not contain assignment                                                 no-return-assign
-  457:5   error    "obj" is already defined                                                                       no-redeclare
-  458:1   error    Expected line before comment                                                                   lines-around-comment
-  461:17  error    Script URL is a form of eval                                                                   no-script-url
-  464:5   error    Comparing to itself is potentially pointless                                                   no-self-compare
-  470:30  error    Unexpected use of comma operator                                                               no-sequences
-  472:8   error    Unexpected use of comma operator                                                               no-sequences
-  472:30  error    There should be no spaces inside this paren                                                    space-in-parens
-  474:5   error    Unexpected use of comma operator                                                               no-sequences
-  477:9   error    Unexpected use of comma operator                                                               no-sequences
-  482:8   error    Unexpected use of comma operator                                                               no-sequences
-  488:5   error    Expected an object to be thrown                                                                no-throw-literal
-  490:5   error    Expected an object to be thrown                                                                no-throw-literal
-  492:5   error    Do not throw undefined                                                                         no-throw-literal
-  492:11  error    undefined was used before it was defined                                                       no-use-before-define
-  494:5   error    Expected an object to be thrown                                                                no-throw-literal
-  496:5   error    Unexpected var, use let or const instead                                                       no-var
-  496:5   error    Expected blank line after variable declarations                                                newline-after-var
-  497:5   error    Expected an object to be thrown                                                                no-throw-literal
-  497:11  error    Unexpected string concatenation                                                                prefer-template
-  500:5   error    Unexpected var, use let or const instead                                                       no-var
-  500:5   error    Expected blank line after variable declarations                                                newline-after-var
-  501:5   error    Expected an object to be thrown                                                                no-throw-literal
-  507:1   error    Expected an assignment or function call and instead saw an expression                          no-unused-expressions
-  511:1   error    unnecessary ".call()"                                                                          no-useless-call
-  511:10  error    undefined was used before it was defined                                                       no-use-before-define
-  512:1   error    unnecessary ".apply()"                                                                         no-useless-call
-  512:11  error    undefined was used before it was defined                                                       no-use-before-define
-  513:1   error    unnecessary ".call()"                                                                          no-useless-call
-  514:1   error    unnecessary ".apply()"                                                                         no-useless-call
-  517:1   error    unnecessary ".call()"                                                                          no-useless-call
-  518:1   error    unnecessary ".apply()"                                                                         no-useless-call
-  522:16  error    Unexpected string concatenation of literals                                                    no-useless-concat
-  523:9   error    Strings must use doublequote                                                                   quotes
-  523:13  error    Unexpected string concatenation of literals                                                    no-useless-concat
-  523:15  error    Strings must use doublequote                                                                   quotes
-  524:9   error    Strings must use doublequote                                                                   quotes
-  524:13  error    Unexpected string concatenation of literals                                                    no-useless-concat
-  525:13  error    Unexpected string concatenation of literals                                                    no-useless-concat
-  525:15  error    Strings must use doublequote                                                                   quotes
-  526:13  error    Unexpected string concatenation of literals                                                    no-useless-concat
-  529:1   warning  Unexpected todo comment                                                                        no-warning-comments
-  530:1   warning  Unexpected fixme comment                                                                       no-warning-comments
-  533:1   error    Unexpected use of 'with' statement                                                             no-with
-  539:13  error    Wrap only the function expression in parens                                                    wrap-iife
-  539:21  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  539:43  error    Requires a space before "}"                                                                    block-spacing
-  542:5   error    Expected literal to be on the right side of ===                                                yoda
-  546:5   error    Expected literal to be on the right side of ===                                                yoda
-  550:5   error    Expected literal to be on the right side of >                                                  yoda
-  554:5   error    Expected literal to be on the right side of <                                                  yoda
-  558:5   error    Expected literal to be on the right side of <=                                                 yoda
-  571:5   error    Expected an object to be thrown                                                                no-throw-literal
-  573:1   error    Value of 'ex' may be overwritten in IE 8 and earlier                                           no-catch-shadow
-  573:8   error    ex is already declared in the upper scope                                                      no-shadow
-  579:1   error    Expected blank line after variable declarations                                                newline-after-var
-  580:1   error    Variables should not be deleted                                                                no-delete-var
-  583:1   error    Found identifier with same name as label                                                       no-label-var
-  596:5   error    Expected blank line after variable declarations                                                newline-after-var
-  596:9   error    someVar is already declared in the upper scope                                                 no-shadow
-  602:5   error    Shadowing of global property "undefined"                                                       no-shadow-restricted-names
-  604:10  error    Shadowing of global property "NaN"                                                             no-shadow-restricted-names
-  607:5   error    It's not necessary to initialize 'undef' to undefined                                          no-undef-init
-  611:5   error    "unused" is defined but never used                                                             no-unused-vars
-  613:10  error    "notUsed" is defined but never used                                                            no-unused-vars
-  613:18  error    "arg" is defined but never used                                                                no-unused-vars
-  622:12  error    b was used before it was defined                                                               no-use-before-define
-  627:17  error    c was used before it was defined                                                               no-use-before-define
-  628:5   error    Expected blank line after variable declarations                                                newline-after-var
-  638:9   error    Expected return with your callback function                                                    callback-return
-  647:1   error    Expected error to be handled                                                                   handle-callback-err
-  647:18  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  652:17  error    Unexpected use of new with require                                                             no-new-require
-  652:21  error    A constructor name should not start with a lowercase letter                                    new-cap
-  659:1   error    Expected blank line after variable declarations                                                newline-after-var
-  659:9   error    There should be no space after '['                                                             array-bracket-spacing
-  660:11  error    There should be no space before ']'                                                            array-bracket-spacing
-  663:16  error    Requires a space after "{"                                                                     block-spacing
-  663:29  error    Requires a space before "}"                                                                    block-spacing
-  664:20  error    Requires a space before "}"                                                                    block-spacing
-  684:13  error    There should be no space before ','                                                            comma-spacing
-  684:13  error    A space is required after ','                                                                  comma-spacing
-  685:14  error    There should be no space before ','                                                            comma-spacing
-  686:1   error    Expected blank line after variable declarations                                                newline-after-var
-  686:13  error    Unnecessarily quoted property `foo` found                                                      quote-props
-  686:26  error    A space is required after ','                                                                  comma-spacing
-  686:26  error    There should be no space before ','                                                            comma-spacing
-  686:27  error    Unnecessarily quoted property `baz` found                                                      quote-props
-  687:7   error    There should be no space before ','                                                            comma-spacing
-  687:7   error    A space is required after ','                                                                  comma-spacing
-  688:1   error    Expected blank line after variable declarations                                                newline-after-var
-  688:21  error    A space is required after ','                                                                  comma-spacing
-  688:21  error    There should be no space before ','                                                            comma-spacing
-  689:18  error    There should be no space before ','                                                            comma-spacing
-  689:18  error    A space is required after ','                                                                  comma-spacing
-  695:4   error    ',' should be placed last                                                                      comma-style
-  698:8   error    There should be no space after '['                                                             computed-property-spacing
-  699:13  error    There should be no space before ']'                                                            computed-property-spacing
-  702:13  error    Extra space after key "k"                                                                      key-spacing
-  702:16  error    Missing space before value for key "k"                                                         key-spacing
-  713:24  error    Too many nested callbacks (4). Maximum allowed is 3                                            max-nested-callbacks
-  723:13  error    A constructor name should not start with a lowercase letter                                    new-cap
-  727:10  error    Missing '()' invoking a constructor                                                            new-parens
-  730:1   error    Expected blank line after variable declarations                                                newline-after-var
-  734:10  error    The array literal notation [] is preferrable                                                   no-array-constructor
-  735:10  error    The array literal notation [] is preferrable                                                   no-array-constructor
-  744:5   error    Unexpected if as the only statement in an else block                                           no-lonely-if
-  755:13  error    Do not nest ternary expressions                                                                no-nested-ternary
-  764:12  error    The object literal notation {} is preferrable                                                  no-new-object
-  765:12  error    The object literal notation {} is preferrable                                                  no-new-object
-  765:12  error    Missing '()' invoking a constructor                                                            new-parens
-  768:1   error    Unexpected space between function name and paren                                               no-spaced-func
-  769:1   error    Unexpected space between function name and paren                                               no-spaced-func
-  773:28  error    Unnecessary use of boolean literals in conditional expression                                  no-unneeded-ternary
-  776:15  error    A space is required after '{'                                                                  object-curly-spacing
-  776:29  error    A space is required before '}'                                                                 object-curly-spacing
-  780:1   error    Assignment can be replaced with operator assignment                                            operator-assignment
-  784:17  error    '+' should be placed at the end of the line                                                    operator-linebreak
-  788:1   error    Block must not be padded by blank lines                                                        padded-blocks
-  792:2   error    Block must not be padded by blank lines                                                        padded-blocks
-  795:9   error    Strings must use doublequote                                                                   quotes
-  798:10  error    i is already declared in the upper scope                                                       no-shadow
-  798:16  error    Missing whitespace after semicolon                                                             semi-spacing
-  798:16  error    Unexpected whitespace before semicolon                                                         semi-spacing
-  798:24  error    Missing whitespace after semicolon                                                             semi-spacing
-  798:24  error    Unexpected whitespace before semicolon                                                         semi-spacing
-  805:9   error    f is already declared in the upper scope                                                       no-shadow
-  805:9   error    f is already declared in the upper scope                                                       no-shadow
-  832:3   error    Missing space before opening brace                                                             space-before-blocks
-  834:2   error    Missing space before keyword "while"                                                           space-before-keywords
-  837:17  error    Unexpected space before function parentheses                                                   space-before-function-paren
-  843:8   error    There should be no spaces inside this paren                                                    space-in-parens
-  843:14  error    There should be no spaces inside this paren                                                    space-in-parens
-  854:9   error    Keyword "throw" must be followed by whitespace                                                 space-return-throw-case
-  854:9   error    Expected an object to be thrown                                                                no-throw-literal
-  858:9   error    Keyword "case" must be followed by whitespace                                                  space-return-throw-case
-  865:5   error    Keyword "return" must be followed by whitespace                                                space-return-throw-case
-  869:1   error    Unexpected space after unary operator "++"                                                     space-unary-ops
-  870:7   error    Unexpected space after unary operator "-"                                                      space-unary-ops
-  875:1   error    Expected exception block, space or tab after // in comment                                     spaced-comment
-  883:7   error    Missing space before =>                                                                        arrow-spacing
-  884:15  error    Missing space after =>                                                                         arrow-spacing
-  891:9   error    unexpected `super()`                                                                           constructor-super
-  899:9   error    unexpected `super()`                                                                           constructor-super
-  905:5   error    this constructor requires `super()`                                                            constructor-super
-  909:10  error    Missing space after *                                                                          generator-star-spacing
-  909:10  error    Unexpected space before *                                                                      generator-star-spacing
-  913:1   error    `C` is a class                                                                                 no-class-assign
-  916:1   error    Expected blank line after variable declarations                                                newline-after-var
-  917:1   error    `kConstant` is constant                                                                        no-const-assign
-  923:5   error    Duplicate name "bar"                                                                           no-dupe-class-members
-  926:5   error    Duplicate name "baz"                                                                           no-dupe-class-members
-  934:9   error    "this" is not allowed before super()                                                           no-this-before-super
-  943:9   error    "this" is not allowed before super()                                                           no-this-before-super
-  952:9   error    "super" is not allowed before super()                                                          no-this-before-super
-  961:15  error    "this" is not allowed before super()                                                           no-this-before-super
-  966:1   error    Unexpected var, use let or const instead                                                       no-var
-  970:5   error    Expected property shorthand                                                                    object-shorthand
-  971:5   error    Expected property shorthand                                                                    object-shorthand
-  975:5   error    Unexpected function expression                                                                 prefer-arrow-callback
-  978:1   error    Expected blank line after variable declarations                                                newline-after-var
-  978:11  error    Unexpected string concatenation                                                                prefer-template
-  979:7   error    Unexpected string concatenation                                                                prefer-template
-  982:1   error    Do not mix 'require' and other declarations                                                    no-mixed-requires
-  987:1   error    "frazzle" is not defined                                                                       no-undef
+test.js: line 9, col 1, Error - Use the global form of "use strict". (strict)
+test.js: line 9, col 18, Error - A space is required after ','. (comma-spacing)
+test.js: line 15, col 1, Error - Expected a conditional expression and instead saw an assignment. (no-cond-assign)
+test.js: line 26, col 27, Error - Unexpected control character in regular expression. (no-control-regex)
+test.js: line 29, col 1, Error - Unexpected 'debugger' statement. (no-debugger)
+test.js: line 40, col 5, Error - Duplicate key 'bar'. (no-dupe-keys)
+test.js: line 49, col 5, Error - Duplicate case label. (no-duplicate-case)
+test.js: line 58, col 1, Error - Empty block statement. (no-empty)
+test.js: line 62, col 17, Error - Empty class. (no-empty-character-class)
+test.js: line 69, col 1, Error - Value of 'e' may be overwritten in IE 8 and earlier. (no-catch-shadow)
+test.js: line 71, col 5, Error - Do not assign to the exception parameter. (no-ex-assign)
+test.js: line 75, col 9, Error - Redundant multiple negation. (no-extra-boolean-cast)
+test.js: line 76, col 8, Error - Redundant double negation in a ternary condition. (no-extra-boolean-cast)
+test.js: line 77, col 16, Error - Redundant double negation in call to Boolean(). (no-extra-boolean-cast)
+test.js: line 78, col 7, Error - Do not use Boolean as a constructor. (no-new-wrappers)
+test.js: line 78, col 20, Error - Redundant double negation in Boolean constructor call. (no-extra-boolean-cast)
+test.js: line 80, col 6, Error - Redundant double negation in an if statement condition. (no-extra-boolean-cast)
+test.js: line 85, col 9, Error - Redundant double negation in a while loop condition. (no-extra-boolean-cast)
+test.js: line 94, col 9, Error - Redundant double negation in a do while loop condition. (no-extra-boolean-cast)
+test.js: line 96, col 9, Error - Redundant double negation in a for loop condition. (no-extra-boolean-cast)
+test.js: line 96, col 14, Error - There should be no spaces inside this paren. (space-in-parens)
+test.js: line 105, col 11, Error - Unnecessary semicolon. (no-extra-semi)
+test.js: line 109, col 1, Error - 'bar' is a function. (no-func-assign)
+test.js: line 113, col 5, Error - 'baz' is a function. (no-func-assign)
+test.js: line 121, col 9, Error - Move function declaration to function body root. (no-inner-declarations)
+test.js: line 126, col 13, Error - Invalid regular expression: /[/: Unterminated character class (no-invalid-regexp)
+test.js: line 128, col 9, Error - Invalid flags supplied to RegExp constructor 'z' (no-invalid-regexp)
+test.js: line 129, col 9, Error - Invalid regular expression: /\/: \ at end of pattern (no-invalid-regexp)
+test.js: line 132, col 5, Error - The `in` expression's left operand is negated (no-negated-in-lhs)
+test.js: line 136, col 12, Error - A function with a name starting with an uppercase letter should only be used as a constructor. (new-cap)
+test.js: line 136, col 12, Error - 'Math' is not a function. (no-obj-calls)
+test.js: line 137, col 12, Error - 'JSON' is not a function. (no-obj-calls)
+test.js: line 137, col 12, Error - A function with a name starting with an uppercase letter should only be used as a constructor. (new-cap)
+test.js: line 140, col 9, Error - Spaces are hard to count. Use {3}. (no-regex-spaces)
+test.js: line 143, col 14, Error - Unexpected comma in middle of array. (no-sparse-arrays)
+test.js: line 146, col 11, Error - Unexpected space between function name and paren. (no-spaced-func)
+test.js: line 147, col 1, Error - Unexpected newline between function and ( of function call. (no-unexpected-multiline)
+test.js: line 150, col 1, Error - Unexpected newline between object and [ of property access. (no-unexpected-multiline)
+test.js: line 150, col 2, Error - Unexpected use of comma operator. (no-sequences)
+test.js: line 157, col 5, Error - Found unexpected statement after a return. (no-unreachable)
+test.js: line 161, col 5, Error - Use the isNaN function to compare with NaN. (use-isnan)
+test.js: line 164, col 5, Error - Use the isNaN function to compare with NaN. (use-isnan)
+test.js: line 168, col 20, Error - Invalid typeof comparison value (valid-typeof)
+test.js: line 169, col 20, Error - Invalid typeof comparison value (valid-typeof)
+test.js: line 170, col 20, Error - Invalid typeof comparison value (valid-typeof)
+test.js: line 171, col 20, Error - Invalid typeof comparison value (valid-typeof)
+test.js: line 172, col 20, Error - Invalid typeof comparison value (valid-typeof)
+test.js: line 173, col 20, Error - Invalid typeof comparison value (valid-typeof)
+test.js: line 189, col 9, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 192, col 5, Error - "block" used outside of binding context. (block-scoped-var)
+test.js: line 203, col 5, Error - Expected a return value. (consistent-return)
+test.js: line 207, col 1, Error - Expected a default case. (default-case)
+test.js: line 214, col 10, Error - ["bar"] is better written in dot notation. (dot-notation)
+test.js: line 221, col 12, Error - Expected '===' and instead saw '=='. (eqeqeq)
+test.js: line 230, col 1, Error - Unexpected alert. (no-alert)
+test.js: line 235, col 5, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 235, col 18, Error - Avoid arguments.caller. (no-caller)
+test.js: line 236, col 18, Error - Avoid arguments.callee. (no-caller)
+test.js: line 248, col 9, Error - Unexpected 'else' after 'return'. (no-else-return)
+test.js: line 252, col 1, Error - Unexpected label "label" (no-empty-label)
+test.js: line 260, col 12, Error - eval can be harmful. (no-eval)
+test.js: line 266, col 5, Error - The function binding is unnecessary. (no-extra-bind)
+test.js: line 266, col 13, Error - Unexpected space before function parentheses. (space-before-function-paren)
+test.js: line 271, col 14, Error - The function binding is unnecessary. (no-extra-bind)
+test.js: line 276, col 10, Error - The function binding is unnecessary. (no-extra-bind)
+test.js: line 281, col 10, Error - The function binding is unnecessary. (no-extra-bind)
+test.js: line 281, col 18, Error - Unexpected space before function parentheses. (space-before-function-paren)
+test.js: line 283, col 14, Error - Unexpected space before function parentheses. (space-before-function-paren)
+test.js: line 288, col 10, Error - The function binding is unnecessary. (no-extra-bind)
+test.js: line 288, col 18, Error - Unexpected space before function parentheses. (space-before-function-paren)
+test.js: line 298, col 5, Error - Expected a "break" statement before "default". (no-fallthrough)
+test.js: line 306, col 7, Error - A leading decimal point can be confused with a dot. (no-floating-decimal)
+test.js: line 307, col 7, Error - A trailing decimal point can be confused with a dot. (no-floating-decimal)
+test.js: line 308, col 8, Error - A leading decimal point can be confused with a dot. (no-floating-decimal)
+test.js: line 314, col 1, Error - Implied eval. Consider passing a function instead of a string. (no-implied-eval)
+test.js: line 328, col 14, Error - foo is already declared in the upper scope. (no-shadow)
+test.js: line 366, col 13, Error - Unexpected `this`. (no-invalid-this)
+test.js: line 367, col 23, Error - Unexpected `this`. (no-invalid-this)
+test.js: line 379, col 1, Error - Reserved name '__iterator__'. (no-iterator)
+test.js: line 382, col 1, Error - Block is redundant. (no-lone-blocks)
+test.js: line 388, col 5, Error - Nested block is redundant. (no-lone-blocks)
+test.js: line 395, col 5, Error - Nested block is redundant. (no-lone-blocks)
+test.js: line 403, col 16, Error - Don't make functions within a loop (no-loop-func)
+test.js: line 410, col 6, Error - Multiple spaces found before 'multi'. (no-multi-spaces)
+test.js: line 410, col 13, Error - Multiple spaces found before '='. (no-multi-spaces)
+test.js: line 410, col 16, Error - Multiple spaces found before '7'. (no-multi-spaces)
+test.js: line 413, col 9, Error - Multiline support is limited to browsers supporting ES5 only. (no-multi-str)
+test.js: line 417, col 1, Error - String is a read-only native object. (no-native-reassign)
+test.js: line 420, col 10, Error - The Function constructor is eval. (no-new-func)
+test.js: line 421, col 10, Error - The Function constructor is eval. (no-new-func)
+test.js: line 424, col 20, Error - Do not use String as a constructor. (no-new-wrappers)
+test.js: line 425, col 20, Error - Do not use Number as a constructor. (no-new-wrappers)
+test.js: line 426, col 21, Error - Do not use Boolean as a constructor. (no-new-wrappers)
+test.js: line 429, col 1, Error - Do not use 'new' for side effects. (no-new)
+test.js: line 432, col 13, Error - Octal literals should not be used. (no-octal)
+test.js: line 435, col 17, Error - Don't use octal: '\251'. Use '\u....' instead. (no-octal-escape)
+test.js: line 445, col 13, Error - The '__proto__' property is deprecated. (no-proto)
+test.js: line 447, col 9, Error - ["__proto__"] is better written in dot notation. (dot-notation)
+test.js: line 447, col 9, Error - The '__proto__' property is deprecated. (no-proto)
+test.js: line 452, col 5, Error - Return statement should not contain assignment. (no-return-assign)
+test.js: line 457, col 5, Error - "obj" is already defined (no-redeclare)
+test.js: line 458, col 1, Error - Expected line before comment. (lines-around-comment)
+test.js: line 461, col 17, Error - Script URL is a form of eval. (no-script-url)
+test.js: line 464, col 5, Error - Comparing to itself is potentially pointless. (no-self-compare)
+test.js: line 470, col 30, Error - Unexpected use of comma operator. (no-sequences)
+test.js: line 472, col 8, Error - Unexpected use of comma operator. (no-sequences)
+test.js: line 472, col 30, Error - There should be no spaces inside this paren. (space-in-parens)
+test.js: line 474, col 5, Error - Unexpected use of comma operator. (no-sequences)
+test.js: line 477, col 9, Error - Unexpected use of comma operator. (no-sequences)
+test.js: line 482, col 8, Error - Unexpected use of comma operator. (no-sequences)
+test.js: line 488, col 5, Error - Expected an object to be thrown. (no-throw-literal)
+test.js: line 490, col 5, Error - Expected an object to be thrown. (no-throw-literal)
+test.js: line 492, col 5, Error - Do not throw undefined. (no-throw-literal)
+test.js: line 492, col 11, Error - undefined was used before it was defined (no-use-before-define)
+test.js: line 494, col 5, Error - Expected an object to be thrown. (no-throw-literal)
+test.js: line 496, col 5, Error - Unexpected var, use let or const instead. (no-var)
+test.js: line 496, col 5, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 497, col 5, Error - Expected an object to be thrown. (no-throw-literal)
+test.js: line 500, col 5, Error - Unexpected var, use let or const instead. (no-var)
+test.js: line 500, col 5, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 501, col 5, Error - Expected an object to be thrown. (no-throw-literal)
+test.js: line 507, col 1, Error - Expected an assignment or function call and instead saw an expression. (no-unused-expressions)
+test.js: line 511, col 1, Error - unnecessary ".call()". (no-useless-call)
+test.js: line 511, col 10, Error - undefined was used before it was defined (no-use-before-define)
+test.js: line 512, col 1, Error - unnecessary ".apply()". (no-useless-call)
+test.js: line 512, col 11, Error - undefined was used before it was defined (no-use-before-define)
+test.js: line 513, col 1, Error - unnecessary ".call()". (no-useless-call)
+test.js: line 514, col 1, Error - unnecessary ".apply()". (no-useless-call)
+test.js: line 517, col 1, Error - unnecessary ".call()". (no-useless-call)
+test.js: line 518, col 1, Error - unnecessary ".apply()". (no-useless-call)
+test.js: line 522, col 16, Error - Unexpected string concatenation of literals. (no-useless-concat)
+test.js: line 523, col 9, Error - Strings must use doublequote. (quotes)
+test.js: line 523, col 13, Error - Unexpected string concatenation of literals. (no-useless-concat)
+test.js: line 523, col 15, Error - Strings must use doublequote. (quotes)
+test.js: line 524, col 9, Error - Strings must use doublequote. (quotes)
+test.js: line 524, col 13, Error - Unexpected string concatenation of literals. (no-useless-concat)
+test.js: line 525, col 13, Error - Unexpected string concatenation of literals. (no-useless-concat)
+test.js: line 525, col 15, Error - Strings must use doublequote. (quotes)
+test.js: line 526, col 13, Error - Unexpected string concatenation of literals. (no-useless-concat)
+test.js: line 529, col 1, Warning - Unexpected todo comment. (no-warning-comments)
+test.js: line 530, col 1, Warning - Unexpected fixme comment. (no-warning-comments)
+test.js: line 533, col 1, Error - Unexpected use of 'with' statement. (no-with)
+test.js: line 539, col 13, Error - Wrap only the function expression in parens. (wrap-iife)
+test.js: line 539, col 21, Error - Unexpected space before function parentheses. (space-before-function-paren)
+test.js: line 539, col 43, Error - Requires a space before "}". (block-spacing)
+test.js: line 542, col 5, Error - Expected literal to be on the right side of ===. (yoda)
+test.js: line 546, col 5, Error - Expected literal to be on the right side of ===. (yoda)
+test.js: line 550, col 5, Error - Expected literal to be on the right side of >. (yoda)
+test.js: line 554, col 5, Error - Expected literal to be on the right side of <. (yoda)
+test.js: line 558, col 5, Error - Expected literal to be on the right side of <=. (yoda)
+test.js: line 571, col 5, Error - Expected an object to be thrown. (no-throw-literal)
+test.js: line 573, col 1, Error - Value of 'ex' may be overwritten in IE 8 and earlier. (no-catch-shadow)
+test.js: line 573, col 8, Error - ex is already declared in the upper scope. (no-shadow)
+test.js: line 579, col 1, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 580, col 1, Error - Variables should not be deleted. (no-delete-var)
+test.js: line 583, col 1, Error - Found identifier with same name as label. (no-label-var)
+test.js: line 596, col 5, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 596, col 9, Error - someVar is already declared in the upper scope. (no-shadow)
+test.js: line 602, col 5, Error - Shadowing of global property "undefined". (no-shadow-restricted-names)
+test.js: line 604, col 10, Error - Shadowing of global property "NaN". (no-shadow-restricted-names)
+test.js: line 607, col 5, Error - It's not necessary to initialize 'undef' to undefined. (no-undef-init)
+test.js: line 611, col 5, Error - "unused" is defined but never used (no-unused-vars)
+test.js: line 613, col 10, Error - "notUsed" is defined but never used (no-unused-vars)
+test.js: line 613, col 18, Error - "arg" is defined but never used (no-unused-vars)
+test.js: line 622, col 12, Error - b was used before it was defined (no-use-before-define)
+test.js: line 627, col 17, Error - c was used before it was defined (no-use-before-define)
+test.js: line 628, col 5, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 638, col 9, Error - Expected return with your callback function. (callback-return)
+test.js: line 647, col 1, Error - Expected error to be handled. (handle-callback-err)
+test.js: line 647, col 18, Error - Unexpected space before function parentheses. (space-before-function-paren)
+test.js: line 652, col 17, Error - Unexpected use of new with require. (no-new-require)
+test.js: line 652, col 21, Error - A constructor name should not start with a lowercase letter. (new-cap)
+test.js: line 659, col 1, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 659, col 9, Error - There should be no space after '[' (array-bracket-spacing)
+test.js: line 660, col 11, Error - There should be no space before ']' (array-bracket-spacing)
+test.js: line 663, col 16, Error - Requires a space after "{". (block-spacing)
+test.js: line 663, col 29, Error - Requires a space before "}". (block-spacing)
+test.js: line 664, col 20, Error - Requires a space before "}". (block-spacing)
+test.js: line 684, col 13, Error - A space is required after ','. (comma-spacing)
+test.js: line 684, col 13, Error - There should be no space before ','. (comma-spacing)
+test.js: line 685, col 14, Error - There should be no space before ','. (comma-spacing)
+test.js: line 686, col 1, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 686, col 13, Error - Unnecessarily quoted property `foo` found. (quote-props)
+test.js: line 686, col 26, Error - A space is required after ','. (comma-spacing)
+test.js: line 686, col 26, Error - There should be no space before ','. (comma-spacing)
+test.js: line 686, col 27, Error - Unnecessarily quoted property `baz` found. (quote-props)
+test.js: line 687, col 7, Error - A space is required after ','. (comma-spacing)
+test.js: line 687, col 7, Error - There should be no space before ','. (comma-spacing)
+test.js: line 688, col 1, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 688, col 21, Error - There should be no space before ','. (comma-spacing)
+test.js: line 688, col 21, Error - A space is required after ','. (comma-spacing)
+test.js: line 689, col 18, Error - A space is required after ','. (comma-spacing)
+test.js: line 689, col 18, Error - There should be no space before ','. (comma-spacing)
+test.js: line 695, col 4, Error - ',' should be placed last. (comma-style)
+test.js: line 698, col 8, Error - There should be no space after '[' (computed-property-spacing)
+test.js: line 699, col 13, Error - There should be no space before ']' (computed-property-spacing)
+test.js: line 702, col 13, Error - Extra space after key "k". (key-spacing)
+test.js: line 702, col 16, Error - Missing space before value for key "k". (key-spacing)
+test.js: line 713, col 24, Error - Too many nested callbacks (4). Maximum allowed is 3. (max-nested-callbacks)
+test.js: line 723, col 13, Error - A constructor name should not start with a lowercase letter. (new-cap)
+test.js: line 727, col 10, Error - Missing '()' invoking a constructor (new-parens)
+test.js: line 730, col 1, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 734, col 10, Error - The array literal notation [] is preferrable. (no-array-constructor)
+test.js: line 735, col 10, Error - The array literal notation [] is preferrable. (no-array-constructor)
+test.js: line 744, col 5, Error - Unexpected if as the only statement in an else block. (no-lonely-if)
+test.js: line 755, col 13, Error - Do not nest ternary expressions (no-nested-ternary)
+test.js: line 764, col 12, Error - The object literal notation {} is preferrable. (no-new-object)
+test.js: line 765, col 12, Error - Missing '()' invoking a constructor (new-parens)
+test.js: line 765, col 12, Error - The object literal notation {} is preferrable. (no-new-object)
+test.js: line 768, col 1, Error - Unexpected space between function name and paren. (no-spaced-func)
+test.js: line 769, col 1, Error - Unexpected space between function name and paren. (no-spaced-func)
+test.js: line 773, col 28, Error - Unnecessary use of boolean literals in conditional expression (no-unneeded-ternary)
+test.js: line 776, col 15, Error - A space is required after '{' (object-curly-spacing)
+test.js: line 776, col 29, Error - A space is required before '}' (object-curly-spacing)
+test.js: line 780, col 1, Error - Assignment can be replaced with operator assignment. (operator-assignment)
+test.js: line 784, col 17, Error - '+' should be placed at the end of the line. (operator-linebreak)
+test.js: line 788, col 1, Error - Block must not be padded by blank lines. (padded-blocks)
+test.js: line 792, col 2, Error - Block must not be padded by blank lines. (padded-blocks)
+test.js: line 795, col 9, Error - Strings must use doublequote. (quotes)
+test.js: line 798, col 10, Error - i is already declared in the upper scope. (no-shadow)
+test.js: line 798, col 16, Error - Missing whitespace after semicolon. (semi-spacing)
+test.js: line 798, col 16, Error - Unexpected whitespace before semicolon. (semi-spacing)
+test.js: line 798, col 24, Error - Unexpected whitespace before semicolon. (semi-spacing)
+test.js: line 798, col 24, Error - Missing whitespace after semicolon. (semi-spacing)
+test.js: line 805, col 9, Error - f is already declared in the upper scope. (no-shadow)
+test.js: line 805, col 9, Error - f is already declared in the upper scope. (no-shadow)
+test.js: line 832, col 3, Error - Missing space before opening brace. (space-before-blocks)
+test.js: line 834, col 2, Error - Missing space before keyword "while". (space-before-keywords)
+test.js: line 837, col 17, Error - Unexpected space before function parentheses. (space-before-function-paren)
+test.js: line 843, col 8, Error - There should be no spaces inside this paren. (space-in-parens)
+test.js: line 843, col 14, Error - There should be no spaces inside this paren. (space-in-parens)
+test.js: line 854, col 9, Error - Keyword "throw" must be followed by whitespace. (space-return-throw-case)
+test.js: line 854, col 9, Error - Expected an object to be thrown. (no-throw-literal)
+test.js: line 858, col 9, Error - Keyword "case" must be followed by whitespace. (space-return-throw-case)
+test.js: line 865, col 5, Error - Keyword "return" must be followed by whitespace. (space-return-throw-case)
+test.js: line 869, col 1, Error - Unexpected space after unary operator "++". (space-unary-ops)
+test.js: line 870, col 7, Error - Unexpected space after unary operator "-". (space-unary-ops)
+test.js: line 875, col 1, Error - Expected exception block, space or tab after // in comment. (spaced-comment)
+test.js: line 883, col 7, Error - Missing space before => (arrow-spacing)
+test.js: line 884, col 15, Error - Missing space after => (arrow-spacing)
+test.js: line 891, col 9, Error - unexpected `super()`. (constructor-super)
+test.js: line 899, col 9, Error - unexpected `super()`. (constructor-super)
+test.js: line 905, col 5, Error - this constructor requires `super()`. (constructor-super)
+test.js: line 909, col 10, Error - Missing space after *. (generator-star-spacing)
+test.js: line 909, col 10, Error - Unexpected space before *. (generator-star-spacing)
+test.js: line 913, col 1, Error - `C` is a class. (no-class-assign)
+test.js: line 916, col 1, Error - Expected blank line after variable declarations. (newline-after-var)
+test.js: line 917, col 1, Error - `kConstant` is constant. (no-const-assign)
+test.js: line 923, col 5, Error - Duplicate name "bar". (no-dupe-class-members)
+test.js: line 926, col 5, Error - Duplicate name "baz". (no-dupe-class-members)
+test.js: line 934, col 9, Error - "this" is not allowed before super() (no-this-before-super)
+test.js: line 943, col 9, Error - "this" is not allowed before super() (no-this-before-super)
+test.js: line 952, col 9, Error - "super" is not allowed before super() (no-this-before-super)
+test.js: line 961, col 15, Error - "this" is not allowed before super() (no-this-before-super)
+test.js: line 966, col 1, Error - Unexpected var, use let or const instead. (no-var)
+test.js: line 970, col 5, Error - Expected property shorthand. (object-shorthand)
+test.js: line 971, col 5, Error - Expected property shorthand. (object-shorthand)
+test.js: line 975, col 5, Error - Unexpected function expression. (prefer-arrow-callback)
+test.js: line 981, col 1, Error - Do not mix 'require' and other declarations. (no-mixed-requires)
+test.js: line 986, col 1, Error - "frazzle" is not defined. (no-undef)
 
-✖ 264 problems (262 errors, 2 warnings)
+260 problems

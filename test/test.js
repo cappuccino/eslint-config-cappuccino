@@ -1,33 +1,58 @@
 "use strict";
 
-/* eslint-disable no-var */
+/* eslint-disable no-var, prefer-arrow-callback */
 
-var child_process = require("child_process"),
+var CLIEngine = require("eslint").CLIEngine,
     fs = require("fs");
 
-var result = child_process.spawnSync("eslint", "--no-eslintrc -c ./lib/eslint.json --rulesdir ./lib/rules -f stylish --no-color ./test/fixtures".split(" "), { encoding: "utf8" });
+var cli = new CLIEngine({
+        configFile: "lib/eslint.json",
+        rulePaths: ["lib/rules"]
+    }),
+    report = cli.executeOnFiles(["test/fixtures"]),
+    status = 0;
 
-if (result.status === 1)
+if (report)
 {
-    // Strip file path
-    var output = result.stdout.trim().split("\n");
+    var generate = process.argv[2] === "generate",
+        reporter = cli.getFormatter("compact"),
+        output = reporter(report.results);
 
-    output.shift();
-    output = output.join("\n");
-
-    var fixture = fs.readFileSync("test/fixtures/errors.txt", "utf8");
-
-    if (fixture === output)
+    // Strip file paths from the report
+    output = output.split("\n").map(function(line)
     {
-        console.log("Test passed");
-        process.exit(0);
+        var pos = line.indexOf(": line ");
+
+        if (pos > 0)
+            return "test.js" + line.substring(pos);
+
+        return line;
+    }).join("\n");
+
+    if (generate)
+    {
+        fs.writeFileSync("test/fixtures/errors.txt", output);
+        console.log("Fixtures generated");
     }
     else
     {
-        console.log("Oops, fixture doesn't match");
-        process.exit(1);
+        var fixture = fs.readFileSync("test/fixtures/errors.txt", "utf8");
+
+        if (fixture === output)
+        {
+            console.log("Test passed");
+        }
+        else
+        {
+            console.log("Oops, fixture doesn't match");
+            status = 1;
+        }
     }
 }
+else
+{
+    console.log("eslint failed!");
+    status = 1;
+}
 
-console.log("Test failed with status ", result.status);
-process.exit(1);
+process.exit(status);
