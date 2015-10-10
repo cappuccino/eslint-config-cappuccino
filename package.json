@@ -19,7 +19,7 @@
   },
   "bugs": "https://github.com/cappuccino/eslint-config-cappuccino/issues",
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.10"
   },
   "main": "lib/index.js",
   "scripts": {
