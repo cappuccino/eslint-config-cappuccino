@@ -974,9 +974,8 @@ let shorthand = {
 // prefer-arrow-callback
 foo(function() { return 7; });
 
-// prefer-template
+// prefer-template: don't warn
 let str = "Hello, " + name + "!";
-str = "Time: " + (12 * 60 * 60 * 1000);
 
 // no-mixed-requires
 let fs = require("fs"),
