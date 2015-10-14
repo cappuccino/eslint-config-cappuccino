@@ -906,7 +906,7 @@ class A extends B
 }
 
 // generator-star-spacing
-function *gen() { }
+function* gen() { }
 
 // no-class-assign
 class C { }
