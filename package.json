@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-cappuccino",
-  "version": "1.1.18",
+  "version": "1.1.19",
   "description": "Shareable config that provides Cappuccino style rules for eslint",
   "homepage": "https://github.com/cappuccino/eslint-config-cappuccino",
   "keywords": [
