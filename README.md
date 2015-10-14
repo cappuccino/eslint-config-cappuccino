@@ -1,7 +1,7 @@
 eslint-config-cappuccino
 ========================
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Build status][appveyor-image]][appveyor-url]
 
 A shareable config that provides Cappuccino style rules for [`eslint`](http://eslint.org).
 
@@ -38,3 +38,6 @@ Add `cappuccino` to the `extends` section of your `.eslintrc` configuration file
 
 [travis-url]: https://travis-ci.org/cappuccino/eslint-config-cappuccino
 [travis-image]: https://travis-ci.org/cappuccino/eslint-config-cappuccino.svg?branch=master
+
+[appveyor-url]: https://ci.appveyor.com/project/aparajita/eslint-config-cappuccino
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/7dd45pxivdgdc473?svg=true

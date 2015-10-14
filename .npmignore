@@ -1,6 +1,7 @@
 .editorconfig
 .npmignore
 .travis.yml
+appveyor.yml
 
 .idea/
 test/
