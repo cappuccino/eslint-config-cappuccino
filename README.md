@@ -1,14 +1,17 @@
 eslint-config-cappuccino
 ========================
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Build status][appveyor-image]][appveyor-url]
+[![NPM version][npm-image]][npm-url]
+[![Travis build status][travis-image]][travis-url]
+[![Appveyor build status][appveyor-image]][appveyor-url]
+[![devDependencies status][dev-dependencies-image]][dev-dependencies-url]
 
-A shareable config that provides Cappuccino style rules for [`eslint`](http://eslint.org).
+A shareable config that provides [Cappuccino][] [style rules][style-rules] for [eslint](http://eslint.org).
 
 
 ## Installation
 
-First you need to install `eslint`:
+First you need to install `eslint` (v1.8+):
 
 ```
 $ npm install -g eslint
@@ -33,11 +36,17 @@ Add `cappuccino` to the `extends` section of your `.eslintrc` configuration file
 }
 ```
 
-[npm-url]: https://npmjs.org/package/eslint-config-cappuccino
+[Cappuccino]: http://cappuccino.org
+[style-rules]: https://github.com/cappuccino/cappuccino/blob/master/CONTRIBUTING.md#cappuccino-coding-style-guidelines
+
 [npm-image]: http://img.shields.io/npm/v/eslint-config-cappuccino.svg?style=flat
+[npm-url]: https://npmjs.org/package/eslint-config-cappuccino
 
-[travis-url]: https://travis-ci.org/cappuccino/eslint-config-cappuccino
 [travis-image]: https://travis-ci.org/cappuccino/eslint-config-cappuccino.svg?branch=master
+[travis-url]: https://travis-ci.org/cappuccino/eslint-config-cappuccino
 
-[appveyor-url]: https://ci.appveyor.com/project/aparajita/eslint-config-cappuccino
 [appveyor-image]: https://ci.appveyor.com/api/projects/status/7dd45pxivdgdc473?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/aparajita/eslint-config-cappuccino
+
+[dev-dependencies-image]: https://gemnasium.com/cappuccino/eslint-config-cappuccino.svg
+[dev-dependencies-url]: https://gemnasium.com/cappuccino/eslint-config-cappuccino#development-dependencies

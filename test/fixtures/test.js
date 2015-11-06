@@ -236,6 +236,24 @@ function noCaller()
         callee = arguments.callee;
 }
 
+// no-case-declarations
+switch (foo)
+{
+    case 1:
+        let noCase1 = 7;
+
+        break;
+
+    case 2:
+        function noCase2() {};
+
+        break;
+
+    default:
+        const noCase3 = 27;
+
+}
+
 // no-div-regex: don't warn
 let div = /=foo/;
 
@@ -405,6 +423,9 @@ for (var i = 0; i < 10; i++) // eslint-disable-line
         return i;
     };
 }
+
+// no-magic-numbers
+let magic = 60 * 60 * 24;
 
 // no-multi-spaces
 let  multi  =  7;
@@ -879,6 +900,11 @@ foo = - foo;
  * ES6
  */
 
+// arrow-body-style
+let arrowBodyStyle = () => {
+    return 0;
+};
+
 // arrow-spacing
 foo = param=> param + 1;
 foo = param =>param + 1;
@@ -907,6 +933,12 @@ class A extends B
 
 // generator-star-spacing
 function* gen() { }
+
+// no-arrow-condition
+if (z => 1)
+{
+    doSomething();
+}
 
 // no-class-assign
 class C { }

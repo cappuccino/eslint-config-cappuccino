@@ -19,15 +19,15 @@
   },
   "bugs": "https://github.com/cappuccino/eslint-config-cappuccino/issues",
   "engines": {
-    "node": ">=0.10"
+    "node": ">=4"
   },
   "main": "lib/index.js",
   "scripts": {
     "generate-fixtures": "node test/test.js generate",
-    "test": "eslint -c lib/eslint.json --rulesdir lib/rules test/*.js && node test/test.js",
+    "test": "eslint --rulesdir lib/rules --ignore-pattern test/fixtures test && node test/test.js",
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
-    "eslint": "^1.6.0"
+    "eslint": "^1.9"
   }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="EslintConfiguration">
-    <custom-configuration-file used="true" path="$PROJECT_DIR$/lib/eslint.json" />
+    <custom-configuration-file used="false" path="$PROJECT_DIR$/.eslintrc" />
     <additional-rules-dir value="$PROJECT_DIR$/../../javascript/eslint-rules" />
   </component>
 </project>
