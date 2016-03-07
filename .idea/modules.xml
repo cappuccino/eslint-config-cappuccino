@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/eslint-config-cappuccino.iml" filepath="$PROJECT_DIR$/.idea/eslint-config-cappuccino.iml" />
       <module fileurl="file://$USER_HOME$/Development/Libs/cappuccino/eslint-config-cappuccino/.idea/eslint-config-cappuccino.iml" filepath="$USER_HOME$/Development/Libs/cappuccino/eslint-config-cappuccino/.idea/eslint-config-cappuccino.iml" />
     </modules>
   </component>

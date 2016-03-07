@@ -28,6 +28,6 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
-    "eslint": "^1.10"
+    "eslint": "^2.3.0"
   }
 }

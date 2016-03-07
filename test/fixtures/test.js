@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars, no-undef, no-redeclare */
+"use strict";
 
 /*
  * Possible errors
  */
 
-// strict: use global "use strict"
 // comma-dangle: don't warn
 let array = [1, 2,];
 
@@ -16,6 +16,15 @@ if (x = 7)
     console.log(x); // no-console: don't warn
 
 // no-constant-condition
+// eslint-disable-next-line
+while (true)
+{
+    if (new Date().getSeconds() > 10)
+        break;
+
+    console.log("foo");
+}
+
 if (true)
     doSomething();
 else if (1)
@@ -28,11 +37,6 @@ let pattern1 = /\\x1f/,
 // no-debugger
 debugger;
 
-// no-dupe-args
-function dupe(arg1, arg2, arg3)
-{
-    doSomething();
-}
 
 // no-dupe-keys
 let foo = {
@@ -73,16 +77,16 @@ catch (e)
 
 // no-extra-boolean-cast
 foo = !!!bar;             // error Redundant multiple negation
-foo = !!bar ? baz : bat;  // error Redundant double negation in a ternary condition
-foo = Boolean(!!bar);     // error Redundant double negation in call to Boolean()
-foo = new Boolean(!!bar); // error Redundant double negation in Boolean constructor call
+foo = !!bar ? baz : bat;  // error Redundant double negation
+foo = Boolean(!!bar);     // error Redundant double negation
+foo = new Boolean(!!bar); // error Redundant double negation
 
-if (!!foo) // error Redundant double negation in an if statement condition
+if (!!foo) // error Redundant double negation
 {
     // ...
 }
 
-while (!!foo) // error Redundant double negation in a while loop condition
+while (!!foo) // error Redundant double negation
 {
     // ...
 }
@@ -91,9 +95,9 @@ do
 {
     // ...
 }
-while (!!foo); // error Redundant double negation in a do while loop condition
+while (!!foo); // error Redundant double negation
 
-for (; !!foo; ) // error Redundant double negation in a for loop condition
+for (; !!foo;) // error Redundant double negation
 {
     // ...
 }
@@ -127,6 +131,9 @@ let regex = new RegExp("["); // error Invalid regular expression: /[/: Untermina
 
 regex = new RegExp(".", "z"); // error Invalid flags supplied to RegExp constructor 'z'
 regex = new RegExp("\\"); // error Invalid regular expression: /\/: \ at end of pattern
+
+// no-irregular-whitespace
+let ws = 7;
 
 // no-negated-in-lhs
 if (!"foo" in foo)
@@ -175,16 +182,45 @@ if (typeof foo === "sting" ||
     doSomething();
 }
 
+// valid-jsdoc
+/**
+ * @param num A number
+ */
+function jsdoc(num)
+{
+}
+
+// valid-typeof
+let valid = typeof jsdoc === "func";
 
 /*
  * Best practices
  */
 
+// acessor-pairs
+let o = {
+    set prop(value)
+    {
+        this._prop = value;
+    }
+};
+
+/* eslint accessor-pairs: [2, { getWithoutSet: true }] */
+let o2 = {
+    get prop2()
+    {
+        return 7;
+    }
+};
+
+// array-callback-return
+let bar = foo.filter(elem => { elem = 0; });
+
 // block-scoped-var
 /* eslint-disable no-var */
 function blockScopedVar()
 {
-    if (true)
+    if (test())
     {
         var block = 7;
     }
@@ -203,6 +239,16 @@ function consistent()
     return;
 }
 
+// curly
+if (foo)
+{
+    doSomething();
+}
+else
+{
+    doSomething();
+}
+
 // default-case
 switch (foo)
 {
@@ -210,12 +256,12 @@ switch (foo)
         break;
 }
 
-// dot-notation
-let xx = foo["bar"];
-
 // dot-location: don't warn
 gulp.src("lib")
     .pipe(bar);
+
+// dot-notation
+let xx = foo["bar"];
 
 // eqeqeq
 let yy = x == foo;
@@ -251,7 +297,6 @@ switch (foo)
 
     default:
         const noCase3 = 27;
-
 }
 
 // no-div-regex: don't warn
@@ -260,15 +305,17 @@ let div = /=foo/;
 // no-else-return
 function noElseReturn()
 {
-    if (true)
+    if (doSomething())
         return true;
     else
         return false;
 }
 
-// no-empty-label
-label:
-    foo = 7;
+// no-empty-function: don't warn
+function emptyFunc() {}
+
+// no-empty-pattern
+// off for now, node doesn't support destructuring yet
 
 // no-eq-null: don't warn
 if (x == null)
@@ -281,7 +328,7 @@ let evil = eval("7");
 Object.prototype.testMe = 7;
 
 // no-extra-bind
-x = function ()
+x = function()
 {   /* error The function binding is unnecessary.*/
     foo();
 }.bind(bar);
@@ -296,19 +343,23 @@ bindme = (() =>
     this.foo();
 }).bind(bar);
 
-bindme = function ()
+bindme = function()
 {   /* error The function binding is unnecessary.*/
     (function () {
         this.foo();
     })();
 }.bind(bar);
 
-bindme = function ()
+bindme = function()
 {   /* error The function binding is unnecessary.*/
     function foobar() {
         this.bar();
     }
 }.bind(baz);
+
+// no-extra-label
+A: while (doSomething())
+    break A;
 
 // no-fallthrough
 switch (foo)
@@ -332,6 +383,8 @@ let implicit = !!foo;
 setTimeout("alert('Hi!');", 100);
 
 // no-invalid-this
+this.a = 0;
+
 function invalidThis()
 {
     this.a = 0;            /* error Unexpected `this`.*/
@@ -396,11 +449,15 @@ function invalidThis()
 // no-iterator
 foo.__iterator__ = function() {}; // error Reserved name '__iterator__'
 
-// no-lone-blocks
+// no-labels: don't warn
+label:
+while (doSomething())
 {
-    function lone() {}
+    while (doSomething())
+        break label;
 }
 
+// no-lone-blocks
 if (foo)
 {
     {
@@ -416,7 +473,8 @@ function lone2()
 }
 
 // no-loop-func
-for (var i = 0; i < 10; i++) // eslint-disable-line
+// eslint-disable-next-line
+for (var i = 0; i < 10; i++)
 {
     funcs[i] = function()
     {
@@ -424,7 +482,7 @@ for (var i = 0; i < 10; i++) // eslint-disable-line
     };
 }
 
-// no-magic-numbers
+// no-magic-numbers: don't warn
 let magic = 60 * 60 * 24;
 
 // no-multi-spaces
@@ -437,6 +495,10 @@ let s = "line 1\
 // no-native-reassign
 String = 7;
 
+// no-new
+class Person {}
+new Person();
+
 // no-new-func
 let f1 = new Function("a", "b", "return a + b"),
     f2 = Function("a", "b", "return a + b");
@@ -446,20 +508,14 @@ let stringObject = new String("Hello world"),
     numberObject = new Number(33),
     booleanObject = new Boolean(false);
 
-// no-new
-new Person();
-
-// no-octal
-let octal = 013;
-
-// no-octal-escape
-let copyright = "Copyright \251";
-
 // no-param-reassign: don't warn
 function reassign(options)
 {
     options = options || {};
 }
+
+// no-process-env: don't warn
+let user = process.env.USER;
 
 // no-proto
 let obj = {},
@@ -467,28 +523,33 @@ let obj = {},
 
 proto = obj["__proto__"];
 
+// no-redeclare
+/* eslint-enable no-redeclare */
+let obj = {};
+/* eslint-disable no-redeclare */
+
 // no-return-assign
 function returnSomething()
 {
     return foo = bar + 2;
 }
 
-// no-redeclare
-/* eslint-enable no-redeclare */
-let obj = {};
-/* eslint-disable no-redeclare */
-
 // no-script-url
 location.href = "javascript:void(0)";
+
+// no-self-assign
+obj = obj;
 
 // no-self-compare
 if (foo === foo)
     console.log("same");
 
 // no-sequences
-let foobar = doSomething, val;
+for (; doSomething(), !!test;);
 
-do { doSomething(); } while (doSomething(), !!test);
+do
+    doSomething();
+while (doSomething(), !!test);
 
 for (; doSomething(), !!test; );
 
@@ -524,8 +585,15 @@ function noThrowLiteral()
     /* eslint-enable */
 }
 
+// no-unmodified-loop-condition
+while (node !== root)
+    doSomething(node);
+
 // no-unused-expressions
 7;
+
+// no-unused-labels
+A: let foo = 0;
 
 // no-useless-call
 // These are same as `foo(1, 2, 3);`
@@ -546,18 +614,29 @@ let a = '1' + `0`;         /* error Unexpected string concatenation of literals.
 let a = `1` + '0';         /* error Unexpected string concatenation of literals.*/
 let a = `1` + `0`;         /* error Unexpected string concatenation of literals.*/
 
+// no-void
+let foo = void bar();
+
 // no-warning-comments
 // TODO: Finish this file
 // FIXME: What's the problem?
 
-// no-with
-with (foo) { doSomething(); }
-
 // radix: don't warn
 x = parseInt("27");
 
+// vars-on-top
+/* eslint-disable no-vars */
+function varsOnTop()
+{
+    doSomething();
+
+    var varsontop = 7;
+}
+
+/* eslint-enable no-vars */
+
 // wrap-iife
-let wrap = (function () { return { y: 1 };}());
+let wrap = (function() { return { y: 1 }; }());
 
 // yoda
 if ("red" === color) {          /* error Expected literal to be on the right side of ===.*/
@@ -589,16 +668,12 @@ let ex = "";
 
 try
 {
-    throw "foo";
+    throw new Error("foo");
 }
 catch (ex)
 {
     console.log(ex);
 }
-
-// no-delete-var
-let d;
-delete d;
 
 // no-label-var
 foo:
@@ -678,14 +753,18 @@ let appHeader = new require("app-header");
 
 // array-bracket-spacing
 let a = [ 1, 2];
+
 a = [1, 2 ];
 
 // block-spacing
 function foo() {return true;} /* error Requires a space after "{".*/ /* error Requires a space before "}".*/
+
+// eslint-disable-next-line curly
 if (foo) { foo = 0;}          /* error Requires a space before "}".*/
 
 // brace-style
 if (foo) {
+    console.log("bar");
     console.log("bar");
 }
 
@@ -696,9 +775,11 @@ function brace() {
 if (foo)
 {
     doSomething();
+    doSomethingElse();
 }
 else {
     doSomething();
+    doSomethingElse();
 }
 
 // comma-spacing
@@ -719,8 +800,93 @@ let first = 7
 foo = x[ foo];
 foo = x[foo ];
 
+// indent
+if (foo)
+        console.log("bad indent");
+
+switch (foo)
+{
+    case 0:
+        console.log("good indent");
+        break;
+
+case 1:
+    console.log("bad indent");
+    break;
+
+    default:
+    console.log("bad indent");
+}
+
 // key-spacing
 let key = { k :7 };
+
+// keyword-spacing
+/* eslint-disable curly, brace-style */
+if(foo)
+    doSomething();
+
+for(let k = 0; k < 10; k++)
+    doSomething();
+
+while(foo > 1)
+    foo = doSomething();
+
+switch(foo)
+{
+    default:
+        break;
+}
+
+try
+{
+    doSomething();
+}
+catch(exc)
+{
+    // foo
+}
+finally
+{
+    // bar
+}
+
+// space-after-keywords
+// space-before-keywords
+do{
+    doSomething();
+    doSomethingElse();
+}while (testme() > 0);
+
+// space-before-function-paren
+function spaceMe ()
+{
+    doSomething();
+}
+
+/* eslint-enable curly, brace-style */
+
+// max-depth
+if (foo)
+{
+    if (bar)
+    {
+        if (baz)
+        {
+            for (let ii = 0; ii < 10; ii++)
+            {
+                for (let jj = 0; jj < ii; jj++)
+                {
+                    if (testme())
+                        console.log("too deep");
+                }
+            }
+        }
+    }
+}
+
+// max-len
+let tooLong = someReallyLongVarName + "This is a really long string" + anotherReallyLongVarName + someReallyLongFunctionName(someVeryLongParameterName);
 
 // max-nested-callbacks
 function one()
@@ -751,6 +917,18 @@ let np = new Foo;
 let someVar = 7;
 console.log(someVar);
 
+// newline-before-return
+function beforeReturn()
+{
+    doSomething();
+    return true;
+}
+
+function getSomething()
+{
+    return 7;  // no error
+}
+
 // no-array-constructor
 let a1 = Array(0, 1, 2),
     a2 = new Array(0, 1, 2);
@@ -769,17 +947,18 @@ else
 }
 
 
+
 // no-multiple-empty-lines
 let a = 7;
-
-// no-nested-ternary
-let thing = foo ? bar : baz === "baz" ? "this is" : "truly evil";
 
 // no-negated-condition: don't warn
 if (!foo)
     console.log("no");
 else
     console.log("yes");
+
+// no-nested-ternary
+let thing = foo ? bar : baz === "baz" ? "this is" : "truly evil";
 
 // no-new-object
 let obj1 = new Object(),
@@ -793,9 +972,15 @@ doSomething
 // no-unneeded-ternary
 let isYes = answer === 1 ? true : false;
 
+// no-whitespace-before-property
+let wsbp = foo. bar;
+
 // object-curly-spacing
 let object = {one: 1, two: 2},
     nestedObject = { one: { two: 2, array: [1, 2] }};
+
+// one-var-declaration-per-line
+let a, b;
 
 // operator-assignment
 foo = foo + 7;
@@ -809,8 +994,16 @@ if (foo)
 {
 
     doSomething();
+    doSomething();
 
 }
+
+// quote-props
+let qp = {
+    one: 1,
+    "one-two": 12,
+    "three": 3
+};
 
 // quotes
 let s = 'quotes';
@@ -818,47 +1011,6 @@ let s = 'quotes';
 // semi-spacing
 for (let i = 0 ;i < 10 ;++i)
     doSomething();
-
-// space-after-keywords
-if(foo)
-    doSomething();
-
-for(let f in foo)
-    doSomething();
-
-while(foo)
-    doSomething();
-
-switch(foo)
-{
-    default:
-        break;
-}
-
-try
-{
-    doSomething();
-}
-catch(exc)
-{
-    // foo
-}
-finally
-{
-    // bar
-}
-
-// space-after-keywords
-// space-before-keywords
-do{
-    doSomething();
-}while (foo);
-
-// space-before-function-paren
-function spaceMe ()
-{
-    doSomething();
-}
 
 // space-in-parens
 spaceMe( 1, 2 );
@@ -901,9 +1053,7 @@ foo = - foo;
  */
 
 // arrow-body-style
-let arrowBodyStyle = () => {
-    return 0;
-};
+let arrowBodyStyle = () => { return 0; };
 
 // arrow-spacing
 foo = param=> param + 1;
@@ -958,6 +1108,9 @@ class Foo
     static baz() { }
 }
 
+// no-new-symbol
+let ns = new Symbol("foo");
+
 // no-this-before-super
 class A extends B
 {
@@ -994,6 +1147,20 @@ class A extends B
     }
 }
 
+// no-useless-constructor
+class NUC
+{
+    constructor() {}
+}
+
+class NUC2 extends NUC
+{
+    constructor(...args)
+    {
+        super(...args);
+    }
+}
+
 // no-var
 var v;
 
@@ -1015,6 +1182,12 @@ let fs = require("fs"),
 
 // no-undef
 /* eslint-enable no-undef */
-frazzle = foo;
+let foo = frazzle;
 
 /* eslint-disable no-undef */
+
+// yield-star-spacing
+function *generator()
+{
+    yield *other();
+}

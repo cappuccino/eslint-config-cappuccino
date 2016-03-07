@@ -5,9 +5,9 @@ const
     fs = require("fs");
 
 let cli = new CLIEngine({
-        configFile: "lib/eslint.json",
+        configFile: "lib/eslint.yml",
         ignore: false,
-        rulePaths: ["lib/rules"]
+        rulesDir: "lib/rules"
     }),
     report = cli.executeOnFiles(["test/fixtures"]),
     status = 0;
@@ -41,9 +41,7 @@ if (report)
         const fixture = fs.readFileSync("test/fixtures/errors.txt", "utf8");
 
         if (fixture === output)
-        {
             console.log("Test passed");
-        }
         else
         {
             console.log("Oops, fixture doesn't match");
