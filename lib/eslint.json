@@ -32,6 +32,7 @@
         "use-isnan": "error",
         "valid-jsdoc": "error",
         "valid-typeof": "error",
+
         "accessor-pairs": "error",
         "array-callback-return": "error",
         "block-scoped-var": "error",
@@ -103,10 +104,12 @@
         ],
         "no-with": "error",
         "radix": "off",
-        "vars-on-top": "error",
+        "vars-on-top": "off",
         "wrap-iife": ["error", "inside"],
         "yoda": "error",
+
         "strict": ["error", "global"],
+
         "init-declarations": "off",
         "no-catch-shadow": "error",
         "no-delete-var": "error",
@@ -119,6 +122,7 @@
         "no-undefined": "off",
         "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
         "no-use-before-define": ["error", "nofunc"],
+
         "callback-return": "error",
         "global-require": "off",
         "handle-callback-err": "error",
