@@ -16,7 +16,7 @@ if (x = 7)
     console.log(x); // no-console: don't warn
 
 // no-constant-condition
-// eslint-disable-next-line
+// This doesn't warn
 while (true)
 {
     if (new Date().getSeconds() > 10)
