@@ -1189,5 +1189,5 @@ let foo = frazzle;
 // yield-star-spacing
 function *generator()
 {
-    yield *other();
+    yield* other();
 }

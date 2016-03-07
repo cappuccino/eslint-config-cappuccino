@@ -231,6 +231,6 @@
         "prefer-template": "off",
         "template-curly-spacing": "off",
         "require-yield": "error",
-        "yield-star-spacing": ["error", "after"]
+        "yield-star-spacing": ["error", "before"]
     }
 }

@@ -322,7 +322,7 @@ test.js: line 1170, col 5, Error - Expected property shorthand. (object-shorthan
 test.js: line 1174, col 5, Error - Unexpected function expression. (prefer-arrow-callback)
 test.js: line 1180, col 1, Error - Do not mix 'require' and other declarations. (no-mixed-requires)
 test.js: line 1185, col 11, Error - 'frazzle' is not defined. (no-undef)
-test.js: line 1192, col 11, Error - Missing space after *. (yield-star-spacing)
-test.js: line 1192, col 11, Error - Unexpected space before *. (yield-star-spacing)
+test.js: line 1192, col 10, Error - Unexpected space after *. (yield-star-spacing)
+test.js: line 1192, col 10, Error - Missing space before *. (yield-star-spacing)
 
 326 problems
