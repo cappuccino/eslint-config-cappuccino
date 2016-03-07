@@ -1,2 +1,2 @@
 ---
-  extends: ./lib/eslint.yml
+  extends: ./lib/eslint.json
