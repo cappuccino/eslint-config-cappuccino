@@ -29,5 +29,8 @@
   },
   "devDependencies": {
     "eslint": "^2.3.0"
+  },
+  "dependencies": {
+    "strip-json-comments": "^2.0.1"
   }
 }
