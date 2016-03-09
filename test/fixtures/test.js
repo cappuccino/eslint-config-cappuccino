@@ -239,7 +239,7 @@ function consistent()
     return;
 }
 
-// curly
+// curly - warns
 if (foo)
 {
     doSomething();

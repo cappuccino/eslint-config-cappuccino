@@ -4,6 +4,7 @@
         "node": true
     },
     "rules": {
+        // Possible errors
         "comma-dangle": "off",
         "no-cond-assign": "error",
         "no-console": "off",
@@ -33,12 +34,13 @@
         "valid-jsdoc": "error",
         "valid-typeof": "error",
 
+        // Best practices
         "accessor-pairs": "error",
         "array-callback-return": "error",
         "block-scoped-var": "error",
         "complexity": "off",
         "consistent-return": "error",
-        "curly": ["error", "multi-or-nest"],
+        "curly": ["warn", "multi-or-nest"],
         "default-case": "error",
         "dot-notation": "error",
         "dot-location": "off",
@@ -108,8 +110,10 @@
         "wrap-iife": ["error", "inside"],
         "yoda": "error",
 
+        // Strict mode
         "strict": ["error", "global"],
 
+        // Variables
         "init-declarations": "off",
         "no-catch-shadow": "error",
         "no-delete-var": "error",
@@ -123,6 +127,7 @@
         "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
         "no-use-before-define": ["error", "nofunc"],
 
+        // Node.js and CommonJS
         "callback-return": "error",
         "global-require": "off",
         "handle-callback-err": "error",
@@ -133,6 +138,8 @@
         "no-restricted-imports": "off",
         "no-restricted-modules": "off",
         "no-sync": "off",
+
+        // Stylistic issues
         "array-bracket-spacing": ["error", "never"],
         "block-spacing": ["error", "always"],
         "brace-style": ["error", "allman", { "allowSingleLine": true }],
@@ -209,6 +216,8 @@
         "space-unary-ops": ["error", { "words": true, "nonwords": false }],
         "spaced-comment": ["error", "always", { "exceptions": ["-"] }],
         "wrap-regex": "off",
+
+        // ES6
         "arrow-body-style": ["error", "as-needed"],
         "array-parens": "off",
         "arrow-spacing": "error",
