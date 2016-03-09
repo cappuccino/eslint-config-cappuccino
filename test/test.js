@@ -5,7 +5,7 @@ const
     fs = require("fs");
 
 let cli = new CLIEngine({
-        configFile: "lib/eslint.json",
+        configFile: "lib/index.js",
         ignore: false,
         rulesDir: "lib/rules"
     }),
