@@ -28,7 +28,7 @@
     "postversion": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
-    "eslint": "^2.5.2"
+    "eslint": "^2.5.3"
   },
   "dependencies": {
     "strip-json-comments": "^2.0.1"
