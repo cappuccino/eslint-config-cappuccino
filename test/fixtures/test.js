@@ -345,14 +345,16 @@ bindme = (() =>
 
 bindme = function()
 {   /* error The function binding is unnecessary.*/
-    (function () {
+    (function ()
+    {
         this.foo();
     })();
 }.bind(bar);
 
 bindme = function()
 {   /* error The function binding is unnecessary.*/
-    function foobar() {
+    function foobar()
+    {
         this.bar();
     }
 }.bind(baz);
@@ -781,6 +783,9 @@ else {
     doSomething();
     doSomethingElse();
 }
+
+// don't warn
+let ff = function() { doSomething(); };
 
 // comma-spacing
 let foo = 1 ,bar = 2;                   /* error There should be no space before ','.*/ /* error A space is required after ','.*/
